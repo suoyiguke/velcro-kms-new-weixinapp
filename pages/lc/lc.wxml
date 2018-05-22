@@ -1,0 +1,18 @@
+<!--pages/lc/lc.wxml-->
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml"/>
+<include src="/commont/tab/tab.wxml"/>
+
+<!-- 流程列表 -->
+<view class="lc-list {{option1?'show':'hidden'}}">
+
+<view class="lc-list-bh">01.20.22.02</view>
+<view class="lc-list-title">知识地图</view>
+
+<view class="lc-list-item">
+<text class="lc-list-item-author">创建：sysadmin7</text>
+<text class="lc-list-item-time">创建时间：2018-04-13</text>
+</view>
+
+
+</view>

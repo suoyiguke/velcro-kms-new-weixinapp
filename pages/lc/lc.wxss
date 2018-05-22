@@ -1,0 +1,31 @@
+/* pages/lc/lc.wxss */
+.lc-list{
+  border: 1px solid #DDDDDD;
+  height: 180rpx;
+
+  padding-left: 25rpx;
+  padding-top: 25rpx;
+}
+
+
+.lc-list-bh{
+  margin-bottom: 20rpx;
+  font-size: 13px;
+}
+.lc-list-title{
+ margin-bottom: 20rpx;
+}
+
+.lc-list-item{
+  
+ margin-bottom: 20rpx;
+ font-size: 13px;
+}
+.lc-list-item-author{
+  display: inline-block;
+  margin-right: 30rpx;
+
+}
+.lc-list-item-time{
+  display: inline-block;
+}

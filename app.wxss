@@ -1,0 +1,3 @@
+@import "/commont/header/header.wxss";
+@import "/commont/serach/serach.wxss";
+@import "/commont/tab/tab.wxss";

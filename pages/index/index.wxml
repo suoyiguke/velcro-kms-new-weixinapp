@@ -1,0 +1,27 @@
+<!-- 引入标题 -->
+<include src="/commont/header/header.wxml"/>
+<!-- 首页滑块 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+<block wx:for="{{background}}" wx:key="*this">
+<swiper-item>
+<image src="{{item}}" class="lunboimage"></image>
+</swiper-item>
+</block>
+</swiper>
+<!-- 间隔 -->
+<view class="index-bg-gray"></view>
+
+<!-- 功能栏 -->
+<view class="index-home-nav">
+
+<block wx:for="{{iconfont_yangshi}}">
+<view class="index-item">
+<!-- 微信小程序的字体图标实现-->
+<text class="iconfont {{item.style}} font24 {{item.color}}"></text>
+<text class="index-item-text">{{item.title}}</text>
+
+</view>
+</block>
+
+</view>

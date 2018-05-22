@@ -1,0 +1,8 @@
+<!-- ab切换实现 -->
+  <view class="nav">
+    <view class="{{option1?'select':'unchecked'}}" bind:tap="selectOption1">{{optionTitle[0]}}</view>
+    <view class="{{option2?'select':'unchecked'}}" bind:tap="selectOption2">{{optionTitle[1]}}</view>
+    <view class="{{option3?'select':'unchecked'}}" bind:tap="selectOption3">{{optionTitle[2]}}</view>
+  </view>
+
+

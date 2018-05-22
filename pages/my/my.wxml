@@ -1,0 +1,27 @@
+<!--pages/my/my.wxml-->
+<include src="/commont/header/header.wxml" />
+
+<!-- 个人信息 -->
+<view class="my-info">
+  <view>
+    <image src="/static/img/user1.jpg" class="my-info-img"></image>
+    <view class="my-info-text">sysadmin1</view>
+  </view>
+</view>
+
+<!-- 菜单项 -->
+<view class="my-info-list">
+  <block wx:for="{{myFontIconList}}">
+
+    <view class="my-info-list-item">
+      <text class="iconfont {{item.style}} {{item.size}} {{item.color}}  myicon"></text>
+      <text class="iconfont-text">{{item.title}} </text>
+    </view>
+  </block>
+
+</view>
+
+<!-- 登录按钮 -->
+<view class="my-login-view">
+ <view class="my-login-view-botton">退出登录</view>
+</view>

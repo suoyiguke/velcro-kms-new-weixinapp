@@ -1,0 +1,4 @@
+<!--pages/txl/txl.wxml-->
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml"/>
+<include src="/commont/tab/tab.wxml"/>

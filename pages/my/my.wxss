@@ -1,0 +1,74 @@
+/* pages/my/my.wxss */
+/* 导入我的版块的字体图标 */
+@import "/static/css/my-stylesheet.wxss";
+/* 导入背景图片 */
+@import "/static/backgroundimage/my.wxss";
+
+/* 头像 */
+.my-info-img{
+
+ width: 80px;
+ height: 80px;
+ margin-top: 20px;
+ }
+
+/* 名字 */
+.my-info-text{
+  margin-top: 15px;
+  color: #fff;
+}
+
+
+
+/* 整个菜单 */
+.my-info-list{
+
+}
+
+/* 菜单子项 */
+.my-info-list-item{
+   height: 54px;
+   line-height: 54px;
+   border: 1px solid #DDDDDD;
+   
+
+}
+
+/* 图标定位 */
+.myicon{
+  position: relative;
+  left: 15px;
+
+}
+
+/* 菜单名 */
+.iconfont-text{
+
+  position: relative;
+  left: 25px;
+  bottom: 3px;
+
+}
+
+
+.my-login-view{
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+
+
+.my-login-view-botton{
+   display: inline-block;
+   background-color: #E36660;
+   height: 40px;
+   line-height: 40px;
+   width: 260px;
+   color: #fff;
+
+}
+
+
+
+
+

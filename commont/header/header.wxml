@@ -1,0 +1,6 @@
+
+<view class="head" fixed="true">  
+{{title}}
+</view>
+<view class="head-jg">  
+</view>
