@@ -1,0 +1,8 @@
+<!--pages/noTabBar/notice/notice.wxml-->
+<include src="/commont/serach/serach.wxml"/>
+<view class="list-item {{background}}" bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd">
+<text class="notice-title">LED项目</text>
+<text class="notice-time">创建时间：2017-07-21</text>
+
+</view>
+

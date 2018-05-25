@@ -1,6 +1,14 @@
 
-<view class="head" fixed="true">  
-{{title}}
+<view class="head" fixed="true"> 
+
+<block wx:if="{{lastTitle != void(0)}}">
+<text bind:tap="returnLastPage"><text class="head-return-icon">←</text><text class="head-return-text">{{lastTitle}}</text></text>
+</block>
+<text class="head-title">{{title}}</text>
+<block wx:if="{{headAdd === true}}">
+<text class="head-new"  bind:tap="addItem">+</text>
+</block>
 </view>
+<!-- 尸位素餐 -->
 <view class="head-jg">  
 </view>

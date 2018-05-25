@@ -1,40 +1,11 @@
-// pages/txl/txl.js
+// pages/noTabBar/notice/notice.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title: "流程",
-    option1: true,
-    option2: false,
-    option3: false,
-    optionTitle: ["待办", "已办", "知会"],
-    background: "bc-unchecked", /* 列表默认样式 */
-    headAdd: true /* 是否有加号？ */
-  },
-  selectOption1: function (e) {
-    this.setData({
-      option1: true,
-      option2: false,
-      option3: false
-
-    })
-  },
-  selectOption2: function (e) {
-    this.setData({
-      option1: false,
-      option2: true,
-      option3: false
-    })
-  },
-  selectOption3: function (e) {
-    this.setData({
-      option1: false,
-      option2: false,
-      option3: true
-    })
-
+    background: "bc-unchecked" /* 列表默认样式 */
   },
 
   /**
@@ -106,19 +77,5 @@ Page({
       background: "bc-unchecked" /* 改变样式 */
     });
     console.log("触摸结束=============");
-  },
-  itemTap: function(e) {
-   
-    console.log("item被点击=============");
-    var urlx = "/pages/lc/taskdetails/taskdetails?title=" + this.data.title;
-    wx.navigateTo({
-      url: urlx
-    });
-  },
-  /* 跳转到添加页面 */
-  addItem:function(){
-    wx.navigateTo({
-      url: "/pages/lc/addflow/addflow?title=" + this.data.title
-    });
   }
 })

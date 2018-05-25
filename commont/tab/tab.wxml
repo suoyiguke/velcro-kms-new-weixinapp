@@ -2,7 +2,13 @@
   <view class="nav">
     <view class="{{option1?'select':'unchecked'}}" bind:tap="selectOption1">{{optionTitle[0]}}</view>
     <view class="{{option2?'select':'unchecked'}}" bind:tap="selectOption2">{{optionTitle[1]}}</view>
-    <view class="{{option3?'select':'unchecked'}}" bind:tap="selectOption3">{{optionTitle[2]}}</view>
+
+
+   <!-- 第三个tab是否存在？ -->
+    <block wx:if="{{option3 != void(0)}}">
+      <view class="{{option3?'select':'unchecked'}}" bind:tap="selectOption3">{{optionTitle[2]}}</view>
+    </block>
+
   </view>
 
 

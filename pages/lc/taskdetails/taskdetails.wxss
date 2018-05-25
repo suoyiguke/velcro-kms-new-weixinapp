@@ -1,0 +1,124 @@
+
+/* 导入我的版块的字体图标 */
+@import "/static/css/my-stylesheet.wxss";
+
+/* pages/lc/taskdetails/taskdetails.wxss */
+.taskdetails-list-item{
+  height: 76rpx;
+  background-color: #F5F5F5;
+  text-align: center;
+  line-height: 76rpx;
+  border: 1px solid #DDDDDD;
+  font-size: 14px;
+}
+
+.taskdetails-edit-title{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #387EF5;
+  color: #FFFFFF;
+  font-size: 14px;
+}
+
+.myicon{
+
+   margin-left: 30rpx;
+   margin-right: 10rpx;
+}
+
+.taskdetails-edit-content{
+  height: 230rpx;
+  border: 1px solid #D7D7DA;
+  position: relative;
+
+
+}
+
+
+.taskdetails-edit-content-textarea{
+ position: absolute;
+ left:50%;
+ margin-left:-326rpx; 
+ top:50%;
+ margin-top :-80rpx; 
+
+ height: 160rpx;
+ width:652rpx;
+ border: 1px solid #B4D2EF;
+ border-radius:5px;
+ font-size: 14px;
+ }
+
+ .taskdetails-button{
+   height: 154rpx;
+   background-color: #FFFFFF;
+/*    border-left: 1px solid #D7D7DA;
+   border-right: 1px solid #D7D7DA;
+   border-bottom: 1px solid #D7D7DA; */
+   
+  text-align: center;
+  line-height: 154rpx;
+
+  color: #FFFFFF;
+
+ }
+
+
+.taskdetails-button-save{
+  display: inline-block;
+  width: 180rpx;
+  height: 100rpx;
+  background-color: #387EF5;
+  border-radius:4px;
+
+  text-align: center;
+  line-height: 100rpx;
+
+  margin-right: 20rpx;
+  
+
+}
+
+
+.taskdetails-button-submit{
+
+    display: inline-block;
+  width: 180rpx;
+  height: 100rpx;
+  background-color: #387EF5;
+  border-radius:4px;
+
+  text-align: center;
+  line-height: 100rpx;
+    margin-right: 20rpx;
+
+}
+.taskdetails-button-more{
+
+    display: inline-block;
+  width: 180rpx;
+  height: 100rpx;
+  background-color: #387EF5;
+  border-radius:4px;
+
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.hideTextArea{
+  display: none;
+}
+.updatecolor{
+  background-color: #3BA2F5;
+}
+
+/* 底部弹窗相关样式 */
+.taskdetails-action-sheet-title{
+  color: #8F8F8F;
+  font-size: 14px;
+
+}
+.taskdetails-action-sheet-item{
+  color: #1383FE;
+}
+

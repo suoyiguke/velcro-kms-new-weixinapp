@@ -4,16 +4,33 @@
     "pages/txl/txl",
     "pages/lc/lc",
     "pages/my/my",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/noTabBar/doc/doc",
+    "pages/noTabBar/message/message",
+    "pages/noTabBar/notice/notice",
+    "pages/noTabBar/project/project",
+    "pages/noTabBar/contract/contract",
+    "pages/noTabBar/map/map",
+    "pages/noTabBar/questionnaire/questionnaire",
+    "pages/noTabBar/examination/examination",
+    "pages/noTabBar/vote/vote",
+    "pages/noTabBar/encyclopedias/encyclopedias",
+    "pages/noTabBar/team/team",
+    "pages/noTabBar/interaction/interaction",
+    "pages/noTabBar/expert/expert",
+    "pages/noTabBar/customer/customer",
+    "pages/lc/taskdetails/taskdetails",
+    "pages/lc/addflow/addflow",
+    "pages/lc/taskdetails/opinion/opinion"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "蓑衣孤客作品",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "backgroundColor":"#F8F8F8",
+    "backgroundColor": "#F8F8F8",
     "list": [
       {
         "pagePath": "pages/index/index",
@@ -32,7 +49,7 @@
         "text": "流程",
         "iconPath": "/static/img/icon/lc1.png",
         "selectedIconPath": "/static/img/icon/lc2.png"
-      }  ,
+      },
       {
         "pagePath": "pages/my/my",
         "text": "我",

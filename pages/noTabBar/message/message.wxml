@@ -1,0 +1,25 @@
+<!--pages/noTabBar/doc/doc.wxml-->
+<include src="/commont/serach/serach.wxml"/>
+<include src="/commont/tab/tab.wxml"/>
+
+<!-- 消息内容 -->
+<view  class="list-item {{option1?'show':'hidden'}} list-item {{background}}" bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd">
+
+<image src="/static/img/notice.png" class="messgae-item-img"></image>
+<view >
+  <text class="messgae-item-title">档案室</text>
+  <text class="messgae-item-author">尹凯</text>
+  <text class="messgae-item-time">2018 02 26</text>
+</view>
+</view>
+
+<view class="list-item {{option2?'show':'hidden'}}">
+<image src="/static/img/notice.png" class="messgae-item-img"></image>
+<view>
+  <text class="messgae-item-title">团队推荐</text>
+  <text class="messgae-item-author">蓑衣孤客</text>
+  <text class="messgae-item-time">2018 02 26</text>
+</view>
+</view>
+
+

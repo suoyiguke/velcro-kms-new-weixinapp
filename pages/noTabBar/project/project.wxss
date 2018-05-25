@@ -1,0 +1,14 @@
+/* pages/noTabBar/notice/notice.wxss */
+
+
+.notice-title{
+  position: absolute;
+  top:-30rpx;
+
+
+}
+.notice-time{
+  position: absolute;
+  top:20rpx;
+
+}

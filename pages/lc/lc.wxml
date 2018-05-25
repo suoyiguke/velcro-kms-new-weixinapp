@@ -4,7 +4,7 @@
 <include src="/commont/tab/tab.wxml"/>
 
 <!-- 流程列表 -->
-<view class="lc-list {{option1?'show':'hidden'}}">
+<view class="lc-list {{option1?'show':'hidden'}} {{background}}" bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" bind:tap="itemTap">
 
 <view class="lc-list-bh">01.20.22.02</view>
 <view class="lc-list-title">知识地图</view>

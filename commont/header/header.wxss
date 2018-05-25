@@ -18,3 +18,23 @@
     width: 100%;
 
 }
+
+.head-return-icon{
+  position: absolute;
+  left:20rpx;
+  font-size:28px;
+
+}
+.head-return-text{
+  position: absolute;
+  left:88rpx;
+
+}
+
+.head-new{
+  position: absolute;
+  left:680rpx;
+  font-size:28px;
+
+
+}

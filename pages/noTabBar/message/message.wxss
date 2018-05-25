@@ -1,0 +1,36 @@
+/* pages/noTabBar/message/message.wxss */
+.messgae-item-img{
+  width: 80rpx;
+  height: 80rpx;
+
+  margin-top:40rpx;
+  margin-left:10rpx;
+
+}
+
+.messgae-item-title{
+  position: absolute;
+ bottom:28rpx;
+left:150rpx;
+
+
+}
+.messgae-item-author{
+ font-size: 11px;
+ position: absolute;
+ bottom:-25rpx;
+ left:150rpx;
+ color: #666666;
+
+
+
+}
+.messgae-item-time{
+   font-size: 11px;
+   position: absolute;
+  bottom:-25rpx;
+  left:560rpx;
+  color: #666666;
+
+
+}

@@ -1,0 +1,3 @@
+<!--pages/lc/addflow/addflow.wxml-->
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml"/>

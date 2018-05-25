@@ -1,0 +1,2 @@
+<!--pages/noTabBar/notice/notice.wxml-->
+<include src="/commont/serach/serach.wxml"/>

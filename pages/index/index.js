@@ -1,3 +1,5 @@
+var indexUtils = require("index-utils.js");
+
 // pages/lc/lc.js
 Page({
 
@@ -5,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+
     title:"KMS知识管理系统",
     background: ['/static/img/csc_1.png', '/static/img/csc_2.png', '/static/img/csc_3.png'],
     indicatorDots: true,
@@ -89,5 +92,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  /* 页面导航 */
+  inedxRedirectAction:function(e){
+    console.log(e.target.id);
+    indexUtils.pageJump(e.target.id);
+
+  },/* 触摸变色 */
+  indexItemTouchstart: function (e) {
+    console.log("触摸开始=============");
+
+    console.log(e.target.id);
+    
   }
+  ,/* 触摸变色 */
+  indexItemTouchend: function (e) {
+  
+    console.log(e.target.id);
+
+    console.log("触摸结束=============");
+  }
+
 })

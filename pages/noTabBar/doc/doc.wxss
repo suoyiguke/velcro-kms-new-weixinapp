@@ -1,0 +1,15 @@
+/* pages/noTabBar/doc/doc.wxss */
+
+/* 箭头号 */
+  .triangle-facing-right {  
+        display: inline-block;  
+        border-right: 8rpx solid #CCCCCC;
+        border-bottom: 8rpx solid #CCCCCC;  
+        width: 25rpx; height: 25rpx;  
+        transform: rotate(-45deg);  
+
+        position: absolute;
+        left: 660rpx;
+        top: 60rpx; 
+    }  
+

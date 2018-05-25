@@ -1,0 +1,34 @@
+<!--pages/lc/taskdetails/taskdetails.wxml-->
+<!-- 引入标题 -->
+<include src="/commont/header/header.wxml"/>
+<view class="taskdetails-list-item">知识地图明细表</view>
+
+<view class="taskdetails-edit-title {{updatecolor}}" bind:tap="showAndHide">
+      <text class="iconfont icon-edit font16 icon_color_edit  myicon"></text>
+      <text>添加流转意见</text>
+</view>
+
+<view class="taskdetails-edit-content {{hide}}">
+      <textarea class="taskdetails-edit-content-textarea"
+      
+       placeholder="请输入流转的意见" maxlength="-1"/>
+</view>
+<view class="taskdetails-button">
+<view class="taskdetails-button-save">保存</view>
+<view class="taskdetails-button-submit">提交</view>
+<view class="taskdetails-button-more" bind:tap="actionSheetTap">更多
+<text class="iconfont icon-liebiao font16 icon_color_edit "></text>
+</view>
+</view>
+
+<!-- 底部弹窗 -->
+<action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
+    <action-sheet-item class="taskdetails-action-sheet-title">更多操作</action-sheet-item>
+
+  <block wx:for-items="{{actionSheetItems}}" wx:key="{{txt}}">
+    <action-sheet-item bindtap="bind{{item.bindtap}}" class="{{background}} taskdetails-action-sheet-item" 
+    bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" id="{{txt}}"
+    >{{item.txt}}</action-sheet-item>
+  </block>
+  <action-sheet-cancel class="cancel" class="taskdetails-action-sheet-item">取消</action-sheet-cancel>
+</action-sheet>

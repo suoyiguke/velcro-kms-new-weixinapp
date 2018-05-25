@@ -1,0 +1,7 @@
+<!--pages/lc/taskdetails/opinion/opinion.wxml-->
+
+<!-- 375*133 -->
+<view class="opinion-list-item">
+<!-- 341*88 -->
+<view class="opinion-list-item-sm"></view>
+</view>
