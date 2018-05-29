@@ -1,7 +1,12 @@
 <!--pages/lc/taskdetails/opinion/opinion.wxml-->
-
+<include src="/commont/header/header.wxml"/>
 <!-- 375*133 -->
 <view class="opinion-list-item">
 <!-- 341*88 -->
-<view class="opinion-list-item-sm"></view>
+<view class="opinion-list-item-sm">
+<text class="opinion-list-item-sm-1">提出审批</text><text class="opinion-list-item-sm-2">sysadmin</text>
+<text class="opinion-list-item-sm-3">提交</text>
+<text class="opinion-list-item-sm-4">不同意</text>
+<text class="opinion-list-item-sm-5">2017-06-27 5:00</text>
+</view>
 </view>

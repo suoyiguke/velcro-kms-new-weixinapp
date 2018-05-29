@@ -1,0 +1,13 @@
+<view hover-class="bc-select" class="bc-unchecked">
+
+  <image src="/static/img/notice.png" class="messgae-item-img"></image>
+  <view>
+    <text class="messgae-item-title">标题：{{messDetailList.messagecaption}}</text>
+    <text class="messgae-item-time">发送日期：{{messDetailList.createtime}}</text>
+  </view>
+</view>
+
+<view hover-class="bc-select" class="bc-unchecked">
+
+<rich-text nodes="{{messDetailList.messagecontent}}"></rich-text>
+</view>

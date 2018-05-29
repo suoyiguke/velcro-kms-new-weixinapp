@@ -1,0 +1,19 @@
+<!--pages/noTabBar/doc/doc.wxml-->
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml"/>
+<import src="article_template.wxml"/>
+
+
+<!-- 判断是否得到数据 --> 
+<block wx:if="{{!dac1List.length == 0}}">
+<!-- 迭代 -->
+<block wx:for="{{dac1List}}">
+    <template is="article-commont-template" data="{{item}}"/>
+</block>
+</block>
+<block wx:else>
+<view  class="bc-none">
+<view>没有对应的数据</view>
+</view>
+</block>
+

@@ -3,7 +3,7 @@
   width: 80rpx;
   height: 80rpx;
 
-  margin-top:40rpx;
+  margin-top:20rpx;
   margin-left:10rpx;
 
 }
@@ -29,8 +29,34 @@ left:150rpx;
    font-size: 11px;
    position: absolute;
   bottom:-25rpx;
-  left:560rpx;
+  left:500rpx;
   color: #666666;
 
 
 }
+
+
+.bc-unchecked{
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  height: 120rpx;
+
+  padding-left: 25rpx;
+  line-height: 120rpx;
+  font-size: 16px;
+
+    position:  relative;
+
+  }
+  .bc-select{
+  background-color: #DDDDDD;/* 背景颜色 */
+  border: 1px solid #DDDDDD;
+  height: 120rpx;
+
+  padding-left: 25rpx;
+  line-height: 120rpx;
+  font-size: 16px;
+
+  position:  relative;
+
+  }

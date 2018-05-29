@@ -1,19 +1,35 @@
-// pages/lc/taskdetails/opinion/opinion.js
+// pages/noTabBar/message/messagedetail/messagedetail.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    title: "流转意见",
-    close: true
+     title: "内容",
+     lastTitle:"消息会话",
+     messDetailList:{} /* 单个json对象 */
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    var id = options.id;
+    console.log(id);
+
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getNotice&id="+id+"&model=Docbase&pageSize=20&userid=8ae08bac4235c9cf01423696a91708c6",
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data);
+        that.setData({
+          messDetailList: res.data
+        });
+      }
+    });
   },
 
   /**
@@ -63,8 +79,5 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },
-  closePage:function(){
-    wx.navigateBack(1);
   }
 })

@@ -109,7 +109,7 @@
   display: none;
 }
 .updatecolor{
-  background-color: #3BA2F5;
+  background-color: #0C60EE;
 }
 
 /* 底部弹窗相关样式 */
@@ -121,4 +121,3 @@
 .taskdetails-action-sheet-item{
   color: #1383FE;
 }
-

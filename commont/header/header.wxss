@@ -21,8 +21,10 @@
 
 .head-return-icon{
   position: absolute;
-  left:20rpx;
+  left:15rpx;
+  bottom: 4rpx;
   font-size:28px;
+  font-weight: bold;
 
 }
 .head-return-text{
@@ -37,4 +39,11 @@
   font-size:28px;
 
 
+}
+
+.head-closePage{
+    position: absolute;
+  left:15rpx;
+  bottom: 4rpx;
+  font-size:18px;
 }

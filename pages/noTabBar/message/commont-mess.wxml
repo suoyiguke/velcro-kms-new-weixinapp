@@ -1,0 +1,9 @@
+ <view id="{{item.id}}" hover-class="bc-select" class="bc-unchecked" bind:tap="itemTap">
+
+        <image src="/static/img/notice.png" class="messgae-item-img"></image>
+        <view>
+          <text class="messgae-item-title">{{item.messagecaption}}</text>
+          <text class="messgae-item-author">{{item.objname}}</text>
+          <text class="messgae-item-time">{{item.sendtime}}</text>
+        </view>
+  </view>

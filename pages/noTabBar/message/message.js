@@ -8,8 +8,10 @@ Page({
     title: "流程",
     option1: true,
     option2: false,
-    optionTitle: ["已读", "未读"],
-    background: "bc-unchecked" /* 列表默认样式 */
+    optionTitle: ["未读", "已读"],
+    background: "bc-unchecked", /* 列表默认样式 */
+    wdMessageList: [],
+    ydMessageList: []
 
   },
   selectOption1: function (e) {
@@ -31,7 +33,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    var that = this;
+    /*  发起接口请求--未读消息 */
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getUnreadMsg&currentPage=1&model=noticeList&pageSize=20&type=UnreadMsg&userId=8ae08bac4235c9cf01423696a91708c6",
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          wdMessageList: res.data.pageBean.recordList
+        });
+  }
+    });
+
+
+    /*  发起接口请求--已读消息 */
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getReadMsg&currentPage=1&model=readmsg&pageSize=20&type=readmsgs&userId=8ae08bac4235c9cf01423696a91708c6",
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          ydMessageList: res.data.pageBean.recordList
+        });
+      }
+    });
+
   },
 
   /**
@@ -81,20 +112,10 @@ Page({
    */
   onShareAppMessage: function () {
   
-  },/* 触摸变色 */
-  itemTouchStart: function (e) {
-    console.log("触摸开始=============");
-    this.setData({
-      background: "bc-select" /* 改变样式 */
+  },
+  itemTap: function(e){
+    wx.navigateTo({
+      url: "/pages/noTabBar/message/messagedetail/messagedetail?id=" + e.target.id
     });
-
-  }
-  ,/* 触摸变色 */
-  itemTouchEnd: function (e) {
-    console.log(e.currentTarget);
-    this.setData({
-      background: "bc-unchecked" /* 改变样式 */
-    });
-    console.log("触摸结束=============");
   }
 })

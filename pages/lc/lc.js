@@ -10,8 +10,10 @@ Page({
     option2: false,
     option3: false,
     optionTitle: ["待办", "已办", "知会"],
-    background: "bc-unchecked", /* 列表默认样式 */
-    headAdd: true /* 是否有加号？ */
+    headAdd: true /* 是否有加号？ */,
+    recordListDb:[],
+    recordListYb:[],
+    recordListZh:[]
   },
   selectOption1: function (e) {
     this.setData({
@@ -41,6 +43,75 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+   /*  发起接口请求--已办 */
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myTask&model=workflow&objname=&pageSize=20&type=myTask&userId=8ae08bac4235c9cf01423696a91708c6", 
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          recordListDb: res.data.pageBean.recordList
+        });
+
+        if (that.data.recordListDb === undefined || that.data.recordListDb.length == 0) {
+          console.log("===============数组1为空");
+        }
+
+      }
+    });
+
+    /*  发起接口请求 */
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myRelative&model=workflow&objname=&pageSize=20&type=myRelative&userId=8ae08bac4235c9cf01423696a91708c6",
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          recordListYb: res.data.pageBean.recordList
+        });
+        if (that.data.recordListYb === undefined || that.data.recordListYb.length == 0) {
+          console.log("===============数组2为空");
+        }
+      }
+    });
+
+    /*  发起接口请求 */
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myNotice&model=workflow&objname=&pageSize=20&type=myNotice&userId=8ae08bac4235c9cf01423696a91708c6",
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          recordListZh: res.data.pageBean.recordList
+        });
+        if (that.data.recordListZh === undefined || that.data.recordListZh.length == 0) {
+          console.log("===============数组3为空");
+        }
+
+      }
+    });
+
+
+
 
   },
 
@@ -94,17 +165,17 @@ Page({
   },/* 触摸变色 */
   itemTouchStart: function (e) {
     console.log("触摸开始=============");
-    this.setData({
-      background: "bc-select" /* 改变样式 */
-    });
+     var id = e.target.id;
+     console.log(id);
+
+    
 
   }
   ,/* 触摸变色 */
   itemTouchEnd: function (e) {
     console.log(e.currentTarget);
-    this.setData({
-      background: "bc-unchecked" /* 改变样式 */
-    });
+   
+  
     console.log("触摸结束=============");
   },
   itemTap: function(e) {

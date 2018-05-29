@@ -29,3 +29,33 @@
 .lc-list-item-time{
   display: inline-block;
 }
+
+.bc-unchecked{
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  height: 180rpx;
+
+  padding-left: 25rpx;
+  padding-top: 25rpx;
+
+  }
+  .bc-select{
+  background-color: #DDDDDD;/* 背景颜色 */
+    border: 1px solid #DDDDDD;
+  height: 180rpx;
+
+  padding-left: 25rpx;
+  padding-top: 25rpx;
+  }
+
+
+.bc-none{
+  background-color: #F8F8F8;
+  /* 37.33*54 */
+  height: 74rpx;
+  text-align: center;
+  line-height: 74rpx;
+  border: 2rpx solid #DDDDDD;
+  font-size: 16px;
+
+}

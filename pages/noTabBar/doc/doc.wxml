@@ -1,12 +1,11 @@
 <!--pages/noTabBar/doc/doc.wxml-->
-<include src="/commont/serach/serach.wxml"/>
-<view class="list-item {{background}}" bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd">
-<text>创新管理</text>
-<view class="triangle-facing-right"></view>
-</view>
 
-<view class="list-item">
-<text>档案室</text>
-<view class="triangle-facing-right"></view>
-</view>
+ <block wx:if="{{isSimple}}">
+     <include src="/pages/noTabBar/doc/commont/simple/simple.wxml"/>
+</block>
+<block wx:else>
+      <include src="/pages/noTabBar/doc/commont/article/article.wxml"/>
+</block>
+
+
 

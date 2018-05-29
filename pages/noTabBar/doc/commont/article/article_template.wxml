@@ -1,0 +1,17 @@
+
+<!-- 流程列表 -->
+<template name="article-commont-template">
+<view hover-class="bc-select" class="bc-unchecked"  bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" bind:tap="itemTap">
+<image src="/static/img/mfolder.png" class="article-item-img"></image>
+<text class="article-item-title">{{item.name}}</text>
+<text class="article-item-time">{{item.createdate}}</text>
+<text class="article-item-author">{{item.creator}}</text>
+<!-- 箭头 -->
+<view class="triangle-facing-right-doc"></view>
+
+</view>
+
+
+</template>
+
+

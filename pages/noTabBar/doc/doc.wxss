@@ -1,8 +1,75 @@
-/* pages/noTabBar/doc/doc.wxss */
 
-/* 箭头号 */
-  .triangle-facing-right {  
-        display: inline-block;  
+.article-item-img{
+  width: 80rpx;
+  height: 80rpx;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -40rpx; 
+}
+
+.article-item-title{
+  position: absolute;
+   top: -15rpx;
+   left: 130rpx; 
+}
+
+.article-item-time{
+    position: absolute;
+   top: 20rpx;
+   left: 130rpx; 
+   color: #787878;
+   font-size: 14px;
+}
+.article-item-author{
+   position: absolute;
+   top: 20rpx;
+   left: 400rpx; 
+   additive-symbols: #787878;
+   font-size: 14px;
+   color:#787878;
+
+
+}
+
+/* pages/lc/lc.wxss */
+
+
+.lc-list-one{
+
+
+}
+
+.bc-unchecked{
+  background-color: #FFFFFF;
+  border: 1px solid #DDDDDD;
+  height: 120rpx;
+
+  padding-left: 25rpx;
+  line-height: 120rpx;
+  font-size: 16px;
+
+    position:  relative;
+
+  }
+  .bc-select{
+  background-color: #DDDDDD;/* 背景颜色 */
+  border: 1px solid #DDDDDD;
+  height: 120rpx;
+
+  padding-left: 25rpx;
+  line-height: 120rpx;
+  font-size: 16px;
+
+  position:  relative;
+
+  }
+
+
+
+
+.triangle-facing-right-doc{
+       display: inline-block;  
         border-right: 8rpx solid #CCCCCC;
         border-bottom: 8rpx solid #CCCCCC;  
         width: 25rpx; height: 25rpx;  
@@ -10,6 +77,5 @@
 
         position: absolute;
         left: 660rpx;
-        top: 60rpx; 
-    }  
-
+        top: 50rpx; 
+}

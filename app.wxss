@@ -2,6 +2,7 @@
 @import "/commont/serach/serach.wxss";
 @import "/commont/tab/tab.wxss";
 
+/* 字体默认14px */
 element, element{
   font-size: 14px;
 }
@@ -9,7 +10,9 @@ element, element{
 /* 统一列表！ */
 .list-item{
   height: 164rpx;
-  border: 1px solid #DDDDDD;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
   line-height: 164rpx;
   padding-left: 26rpx;
   font-size: 16px;
@@ -22,8 +25,26 @@ element, element{
 
   .bc-unchecked{
   background-color: #FFFFFF;
+  
 
   }
   .bc-select{
   background-color: #DDDDDD;/* 背景颜色 */
   }
+
+
+
+/* 箭头号 */
+  .triangle-facing-right {  
+        display: inline-block;  
+        border-right: 8rpx solid #CCCCCC;
+        border-bottom: 8rpx solid #CCCCCC;  
+        width: 25rpx; height: 25rpx;  
+        transform: rotate(-45deg);  
+
+        position: absolute;
+        left: 660rpx;
+        top: 60rpx; 
+    }  
+
+

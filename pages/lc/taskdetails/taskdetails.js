@@ -1,4 +1,7 @@
-// pages/lc/taskdetails/taskdetails.js
+
+var app = getApp();     // 取得全局App
+
+
 Page({
 
   /**
@@ -16,7 +19,8 @@ Page({
       { bindtap: 'Menu1', txt: "查看流转意见" },
       { bindtap: 'Menu2', txt: "退出" },
       { bindtap: 'Menu3', txt: '查看流程图' }
-    ]
+    ],
+    background:[]
 
   },
 
@@ -140,22 +144,64 @@ Page({
     });
   },/* 触摸变色 */
   itemTouchStart: function (e) {
+    
     console.log("触摸开始=============");
-    if (e.target.id === 0){
-       
+    var array = app.globalData.array;
+
+    if (e.target.id == 0){//第一个
+      array[0] = "bc-select";
+      this.setData({
+        background: array
+      });
+    } else if (e.target.id == 1){
+   
+      array[1] = "bc-select";
+      this.setData({
+        background: array
+      });
+    } else if (e.target.id == 2) {
+      array[2] = "bc-select";
+      this.setData({
+        background: array
+      });
+    } else if (e.target.id == 3) {
+      array[3] = "bc-select";
+      this.setData({
+        background: array
+      });
     }
-    this.setData({
-      background: "bc-select" /* 改变样式 */
-    });
+
+    app.globalData.array = array;
+
+
 
   }
   ,/* 触摸变色 */
   itemTouchEnd: function (e) {
-    console.log(e.currentTarget);
-    this.setData({
-      background: "bc-unchecked" /* 改变样式 */
-    });
     console.log("触摸结束=============");
+
+    var array = app.globalData.array;
+    if (e.target.id == 0) {//第一个
+      array[0] = "";
+      this.setData({
+        background: array
+      });
+    } else if (e.target.id == 1) {
+      array[1] = "";
+      this.setData({
+        background: array
+      });
+    } else if (e.target.id == 2) {
+      array[2] = "";
+      this.setData({
+        background: array
+      });
+    } else if (e.target.id == 3) {
+      array[3] = "";
+      this.setData({
+        background: array
+      });
+    }
   }
 
 })

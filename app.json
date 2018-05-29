@@ -21,7 +21,8 @@
     "pages/noTabBar/customer/customer",
     "pages/lc/taskdetails/taskdetails",
     "pages/lc/addflow/addflow",
-    "pages/lc/taskdetails/opinion/opinion"
+    "pages/lc/taskdetails/opinion/opinion",
+    "pages/noTabBar/message/messagedetail/messagedetail"
   ],
   "window": {
     "backgroundTextStyle": "light",

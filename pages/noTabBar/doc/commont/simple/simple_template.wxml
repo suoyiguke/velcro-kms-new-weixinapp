@@ -1,0 +1,15 @@
+
+<!-- 流程列表 -->
+<template name="doc-commont-template">
+<view hover-class="bc-select" class="bc-unchecked"  bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" bind:tap="itemTap">
+
+
+<view class="lc-list-one" id="{{item.id}}">{{item.name}}</view>
+
+<!-- 箭头 -->
+<view class="triangle-facing-right-doc"></view>
+</view>
+
+</template>
+
+

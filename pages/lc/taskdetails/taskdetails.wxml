@@ -25,10 +25,10 @@
 <action-sheet hidden="{{actionSheetHidden}}" bindchange="actionSheetbindchange">
     <action-sheet-item class="taskdetails-action-sheet-title">更多操作</action-sheet-item>
 
-  <block wx:for-items="{{actionSheetItems}}" wx:key="{{txt}}">
-    <action-sheet-item bindtap="bind{{item.bindtap}}" class="{{background}} taskdetails-action-sheet-item" 
-    bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" id="{{txt}}"
+  <block wx:for-items="{{actionSheetItems}}">
+    <action-sheet-item bindtap="bind{{item.bindtap}}" class="taskdetails-action-sheet-item {{background[index]}}" 
+    bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" id="{{index}}"
     >{{item.txt}}</action-sheet-item>
   </block>
-  <action-sheet-cancel class="cancel" class="taskdetails-action-sheet-item">取消</action-sheet-cancel>
+  <action-sheet-cancel class="cancel" class="taskdetails-action-sheet-item {{background[3]}}" id="3"  bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd">取消</action-sheet-cancel>
 </action-sheet>
