@@ -12,3 +12,34 @@
   top:20rpx;
 
 }
+
+/* 统一列表！ */
+.list-item-unchecked{
+  height: 164rpx;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  line-height: 164rpx;
+  padding-left: 26rpx;
+  font-size: 16px;
+  position: relative;
+
+
+}
+
+/* 统一列表！ */
+.list-item-select{
+  height: 164rpx;
+  border-bottom: 1px solid #DDDDDD;
+  border-left: 1px solid #DDDDDD;
+  border-right: 1px solid #DDDDDD;
+  line-height: 164rpx;
+  padding-left: 26rpx;
+  font-size: 16px;
+
+ position: relative;
+
+ background-color: #DDDDDD;
+
+
+}

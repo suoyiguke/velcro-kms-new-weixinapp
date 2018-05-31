@@ -5,13 +5,31 @@ Page({
    * 页面的初始数据
    */
   data: {
-    background: "bc-unchecked" /* 列表默认样式 */
+    projectList:[]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    /* 发起接口请求--已办 */
+    wx.request({
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getProjectList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&isread=1&model=project&objname=&pageSize=20&userId=8ae08bac4235c9cf01423696a91708c6",
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          projectList: res.data.pageBean.recordList
+        });
+      }
+    });
 
   },
 
@@ -62,20 +80,11 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },/* 触摸变色 */
-  itemTouchStart: function (e) {
-    console.log("触摸开始=============");
-    this.setData({
-      background: "bc-select" /* 改变样式 */
-    });
+  },
+  itemTap:function(e){
 
-  }
-  ,/* 触摸变色 */
-  itemTouchEnd: function (e) {
-    console.log(e.currentTarget);
-    this.setData({
-      background: "bc-unchecked" /* 改变样式 */
-    });
-    console.log("触摸结束=============");
+    console.log("e.currentTarget.dataset.projectid");
+
+    console.log(e.currentTarget.dataset.projectid);
   }
 })

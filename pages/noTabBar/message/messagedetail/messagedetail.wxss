@@ -1,1 +1,27 @@
 @import "../message.wxss";
+
+.messgae-item-time{
+   font-size: 11px;
+   position: absolute;
+   bottom:-28rpx;
+   left:150rpx;
+
+  color: #666666;
+
+
+}
+
+
+
+#messgae-item-contentid{
+
+
+display: flex; justify-content: center; flex-direction: column;
+line-height: 20px;
+
+}
+
+.messagedetail-href{
+  color: #551A8B;
+  text-decoration: underline;
+}

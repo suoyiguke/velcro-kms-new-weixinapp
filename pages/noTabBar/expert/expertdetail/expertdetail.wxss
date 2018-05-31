@@ -1,0 +1,86 @@
+/* pages/my/my.wxss */
+/* 导入我的版块的字体图标 */
+@import "/static/css/my-stylesheet.wxss";
+/* 导入背景图片 */
+@import "/static/backgroundimage/my.wxss";
+
+/* 头像 */
+.my-info-img{
+
+ width: 160rpx;
+ height: 160rpx;
+ margin-top: 40rpx;
+  border-radius:80rpx;
+ }
+
+/* 名字 */
+.my-info-text{
+  margin-top: 30rpx;
+  color: #fff;
+}
+
+
+
+/* 整个菜单 */
+.my-info-list{
+
+}
+
+/* 菜单子项 */
+.my-info-list-item-unchecked{
+   height: 108rpx;
+   line-height: 108rpx;
+   border: 1px solid #DDDDDD;
+  
+
+}
+.my-info-list-item-select{
+     height: 108rpx;
+   line-height: 108rpx;
+   border: 1px solid #DDDDDD;
+  background-color: #D9D9D9;
+}
+
+/* 图标定位 */
+.myicon{
+  position: relative;
+  left: 30rpx;
+
+}
+
+/* 菜单名 */
+.iconfont-text{
+
+  position: relative;
+  left: 50rpx;
+  bottom: 6rpx;
+  font-size: 18px;
+}
+
+
+.my-login-view{
+  height: 160rpx;
+  text-align: center;
+  line-height: 160rpx;
+}
+
+
+.my-login-view-botton{
+   display: inline-block;
+   background-color: #E36660;
+   height: 80rpx;
+   line-height: 80rpx;
+   width: 520rpx;
+   color: #fff;
+
+}
+
+
+
+
+.iconfont-content{
+  color: #B2B2B2;
+  float: right;
+  margin-right: 20rpx;
+   font-size: 18px;
+}

@@ -1,4 +1,4 @@
-// pages/noTabBar/message/messagedetail/messagedetail.js
+var util = require("messagedetail-utils.js");
 Page({
 
   /**
@@ -16,7 +16,7 @@ Page({
   onLoad: function (options) {
     var that = this;
     var id = options.id;
-    console.log(id);
+    console.log("消息id============="+id);
 
     wx.request({
       url: "http://119.23.255.13:8098/mobile/execute.do?action=getNotice&id="+id+"&model=Docbase&pageSize=20&userid=8ae08bac4235c9cf01423696a91708c6",
@@ -25,11 +25,24 @@ Page({
       },
       success: function (res) {
         console.log(res.data);
+        if (res.data == void(0)){//获得数据为空！
+          //res.data.messagecontent = "数据为空！";
+          return;
+        }
+        var str = res.data.messagecontent;
+        var num = util.nthIndexOf(str, "，", 1);
+        str = str.replace(str.slice(num + 1), '');
+        console.log(str);
+        res.data.messagecontent = str;
+
         that.setData({
           messDetailList: res.data
         });
+       
       }
     });
+    
+  
   },
 
   /**
@@ -79,5 +92,11 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+  tapitem:function(){
+
+    wx.navigateTo({
+      url: "/pages/noTabBar/message/messagedetail/vecle/vecle"
+    });
   }
 })

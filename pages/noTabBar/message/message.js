@@ -114,8 +114,9 @@ Page({
   
   },
   itemTap: function(e){
+    console.log("消息id============>" + e.currentTarget.dataset.id);
     wx.navigateTo({
-      url: "/pages/noTabBar/message/messagedetail/messagedetail?id=" + e.target.id
+      url: "/pages/noTabBar/message/messagedetail/messagedetail?id=" + e.currentTarget.dataset.id
     });
   }
 })

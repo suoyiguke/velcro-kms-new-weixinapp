@@ -2,19 +2,18 @@
 
   background-color: #387EF5; 
   text-align:  center;
-  height: 43px;
-  line-height: 43px;
+  height: 88rpx;
+  line-height: 88rpx;
   color:#FFFFFF;
   font-size: 17px;
   position: fixed;
-  bottom: 10;
   width: 100%;
   z-index:2;
  
 }
 /* 空位置，由于 position: fixed;的元素会脱离标准流，则需要有个东西占据它的位置 */
 .head-jg{
-    height: 43px;
+    height: 88rpx;
     width: 100%;
 
 }
@@ -23,7 +22,7 @@
   position: absolute;
   left:15rpx;
   bottom: 4rpx;
-  font-size:28px;
+  font-size:56rpx;
   font-weight: bold;
 
 }
@@ -36,7 +35,7 @@
 .head-new{
   position: absolute;
   left:680rpx;
-  font-size:28px;
+  font-size:56rpx;
 
 
 }
@@ -45,5 +44,5 @@
     position: absolute;
   left:15rpx;
   bottom: 4rpx;
-  font-size:18px;
+  font-size:56rpx;
 }

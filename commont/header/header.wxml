@@ -2,7 +2,7 @@
 <view class="head" fixed="true"> 
 
 <block wx:if="{{lastTitle != void(0)}}">
-<text bind:tap="returnLastPage"><text class="head-return-icon">＜</text><text class="head-return-text">{{lastTitle}}</text></text>
+<text bind:tap="{{returnPage}}"><text class="head-return-icon">＜</text><text class="head-return-text">{{lastTitle}}</text></text>
 </block>
 
 <!-- 关闭 -->

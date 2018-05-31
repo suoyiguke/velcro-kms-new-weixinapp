@@ -1,1 +1,81 @@
-/* pages/noTabBar/expert/expert.wxss */
+
+.expert-list-item-unchecked{
+height: 140rpx;
+position: relative;
+border-bottom: 1px solid #E2E2E2;
+border-left: 1px solid #E2E2E2;
+border-right: 1px solid #E2E2E2; 
+
+}
+
+.expert-list-item-select{
+height: 140rpx;
+position: relative;
+border-bottom: 1px solid #E2E2E2;
+border-left: 1px solid #E2E2E2;
+border-right: 1px solid #E2E2E2; 
+background-color: #E2E2E2 ;
+
+}
+
+
+.expert-list-item-img{
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+
+  top:20rpx;
+  left: 10rpx;
+
+}
+
+.expert-list-item-name{
+
+  position: absolute;
+  top:20rpx;
+  left: 120rpx;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.expert-list-item-jj{
+
+  position: absolute;
+  top:80rpx;
+  left: 120rpx;
+
+  font-size: 14px;
+  color: #444444;
+  
+}
+
+.expert-list-item-gz{
+  position: absolute;
+  top: 45rpx;
+  left: 600rpx;
+  height: 52rpx;
+  width: 112rpx;
+  text-align: center;
+  color: #6EA1F7;
+  border: 1px solid #6EA1F7;
+  border-radius:3px;
+
+  font-size: 18px;
+
+}
+
+
+.expert-list-item-qg{
+  position: absolute;
+  top: 45rpx;
+  left: 600rpx;
+  height: 52rpx;
+  width: 112rpx;
+  text-align: center;
+  color: #AFACAC;
+  border: 1px solid #AFACAC;
+  border-radius:3px;
+
+  font-size: 18px;
+
+}

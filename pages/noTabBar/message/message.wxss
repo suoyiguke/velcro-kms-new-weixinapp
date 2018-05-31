@@ -39,10 +39,10 @@ left:150rpx;
 .bc-unchecked{
   background-color: #FFFFFF;
   border: 1px solid #DDDDDD;
-  height: 120rpx;
+  height: 160rpx;
 
   padding-left: 25rpx;
-  line-height: 120rpx;
+  line-height: 160rpx;
   font-size: 16px;
 
     position:  relative;
@@ -51,10 +51,10 @@ left:150rpx;
   .bc-select{
   background-color: #DDDDDD;/* 背景颜色 */
   border: 1px solid #DDDDDD;
-  height: 120rpx;
+  height: 160rpx;
 
   padding-left: 25rpx;
-  line-height: 120rpx;
+  line-height: 160rpx;
   font-size: 16px;
 
   position:  relative;

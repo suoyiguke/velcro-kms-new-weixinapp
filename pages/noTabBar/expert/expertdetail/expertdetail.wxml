@@ -1,0 +1,54 @@
+<!--pages/my/my.wxml-->
+<include src="/commont/header/header.wxml" />
+
+<!-- 个人信息 -->
+<view class="my-info">
+  <view>
+    <!-- 非空判断 -->
+    <block wx:if="{{myFontIconList[13].imageFile != void(0)}}">
+      <image class="my-info-img" src="http://119.23.255.13:8098/ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{myFontIconList[13].imageFile}}"></image>
+    </block>
+    <!-- 默认图片 -->
+    <block wx:else>
+      <image class="my-info-img" src="/static/img/user.gif"></image>
+    </block>
+    <view class="my-info-text">{{myFontIconList[13].userName}}</view>
+  </view>
+</view>
+
+<!-- 菜单项 -->
+<view class="my-info-list">
+  <block wx:for="{{myFontIconList}}">
+    <block wx:if="{{index != 13}}">
+
+      <view data-zjid="{{index>5?myFontIconList[13].userId:''}}" data-itemid="{{index}}" hover-class="my-info-list-item-select" class="my-info-list-item-unchecked"  bind:tap="{{index>5?'itemtap':''}}">
+        <text class="iconfont {{item.style}} {{item.size}} {{item.color}}  myicon"></text>
+        <text class="iconfont-text">{{item.title}} </text>
+
+        <block wx:if="{{index == 0}}">
+          <text class="iconfont-content">{{myFontIconList[13].score==void(0)?"":myFontIconList[13].score}}</text>
+        </block>
+        <block wx:elif="{{index == 1}}">
+          <text class="iconfont-content">{{myFontIconList[13].orgName==void(0)?"":myFontIconList[13].orgName}}</text>
+        </block>
+        <block wx:elif="{{index == 2}}">
+          <text class="iconfont-content">{{myFontIconList[13].tel==void(0)?"":myFontIconList[13].tel}}</text>
+        </block>
+        <block wx:elif="{{index == 3}}">
+          <text class="iconfont-content">{{myFontIconList[13].email==void(0)?"":myFontIconList[13].email}}</text>
+        </block>
+        <block wx:elif="{{index == 4}}">
+          <text class="iconfont-content">{{myFontIconList[13].tel1==void(0)?"":myFontIconList[13].tel1}}</text>
+        </block>
+        <block wx:elif="{{index == 5}}">
+          <text class="iconfont-content">{{myFontIconList[13].keyword==void(0)?"":myFontIconList[13].keyword}}</text>
+        </block>
+
+
+      </view>
+    </block>
+  </block>
+
+
+
+</view>

@@ -22,7 +22,9 @@
     "pages/lc/taskdetails/taskdetails",
     "pages/lc/addflow/addflow",
     "pages/lc/taskdetails/opinion/opinion",
-    "pages/noTabBar/message/messagedetail/messagedetail"
+    "pages/noTabBar/message/messagedetail/messagedetail",
+    "pages/noTabBar/message/messagedetail/vecle/vecle",
+    "pages/noTabBar/expert/expertdetail/expertdetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
