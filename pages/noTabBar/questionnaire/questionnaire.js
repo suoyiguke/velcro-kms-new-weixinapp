@@ -1,4 +1,4 @@
-// pages/questionnaire/questionnaire.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**

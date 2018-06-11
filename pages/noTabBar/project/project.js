@@ -1,4 +1,4 @@
-// pages/noTabBar/notice/notice.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -15,7 +15,7 @@ Page({
     var that = this;
     /* 发起接口请求--已办 */
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getProjectList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&isread=1&model=project&objname=&pageSize=20&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getProjectList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&isread=1&model=project&objname=&pageSize=20&userId=8ae08bac4235c9cf01423696a91708c6",
       data: {
         x: '',
         y: ''
@@ -86,5 +86,10 @@ Page({
     console.log("e.currentTarget.dataset.projectid");
 
     console.log(e.currentTarget.dataset.projectid);
+    wx.navigateTo({
+      url: "/pages/noTabBar/project/projectdetail/projectdetail?projectId=" + e.currentTarget.dataset.projectid
+    });
+
+
   }
 })

@@ -1,0 +1,4 @@
+<include src="/commont/header/header.wxml"/>
+<view class="projectdetail-xmsx">项目属性</view>
+<view class="projectdetail-name">项目名称：<text class="projectdetail-name-text">{{project['项目名称']}}</text></view>
+<view class="projectdetail-cy">项目组成员：<text class="projectdetail-cy-text">{{project['项目组成员']}}</text></view>

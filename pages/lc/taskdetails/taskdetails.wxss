@@ -52,9 +52,6 @@
  .taskdetails-button{
    height: 154rpx;
    background-color: #FFFFFF;
-/*    border-left: 1px solid #D7D7DA;
-   border-right: 1px solid #D7D7DA;
-   border-bottom: 1px solid #D7D7DA; */
    
   text-align: center;
   line-height: 154rpx;

@@ -1,0 +1,36 @@
+<template name="interaction-commont-template">
+  <view class="interaction-list-item-unchecked" hover-class="interaction-list-item-select" bind:tap="itemtap" data-id="{{item.id}}">
+    <view class="interaction-list-item-title">
+      <image id="interaction-list-item-img" src="/static/img/wenda.jpg"></image>{{item.title}}</view>
+
+    <text class="interaction-list-item-name-time">{{item.creatorName}}|{{item.createDate}}</text>
+    <!-- 箭头 -->
+    <text class="triangle-facing-right-interaction"></text>
+
+  </view>
+</template>
+
+
+
+<!-- 判断是否得到数据 -->
+<block wx:if="{{recordListWjj.length != 0&&option1==true}}">
+  <!-- 迭代 -->
+  <block wx:for="{{recordListWjj}}">
+    <template is="interaction-commont-template" data="{{item}}" />
+  </block>
+</block>
+
+<block wx:if="{{recordListYjj.length != 0&&option2==true}}">
+  <!-- 迭代 -->
+  <block wx:for="{{recordListYjj}}">
+    <template is="interaction-commont-template" data="{{item}}" />
+  </block>
+</block>
+
+<block wx:if="{{recordListDd.length != 0&&option3==true}}">
+  <!-- 迭代 -->
+  <block wx:for="{{recordListDd}}">
+    <template is="interaction-commont-template" data="{{item}}" />
+  </block>
+</block>
+

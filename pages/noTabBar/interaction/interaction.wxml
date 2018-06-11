@@ -1,2 +1,22 @@
-<!--pages/noTabBar/interaction/interaction.wxml-->
-<text>pages/noTabBar/interaction/interaction.wxml</text>
+<include src="/commont/header/header.wxml" />
+<include src="/commont/serach/serach.wxml" />
+<include src="/commont/tab/tab.wxml" />
+
+<!-- tab1-->
+<view class="{{option1?'show':'hidden'}}">
+
+<include src="interaction_template.wxml"/>
+</view>
+
+
+<!-- tab2-->
+<view class="{{option2?'show':'hidden'}}">
+
+<include src="interaction_template.wxml"/>
+</view>
+
+<!-- tab3-->
+<view class="{{option3?'show':'hidden'}}">
+
+<include src="interaction_template.wxml"/>
+</view>

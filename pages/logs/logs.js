@@ -1,4 +1,4 @@
-//logs.js
+var app = getApp(); // 取得全局App
 const util = require('../../utils/util.js')
 
 Page({

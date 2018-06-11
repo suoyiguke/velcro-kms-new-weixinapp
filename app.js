@@ -30,7 +30,8 @@ App({
 
   //全局变量
   globalData:{
-    array: new Array("","","","")
+    array: new Array("","","",""),
+    urlPrefix:"http://119.29.176.106:8090/"
     
 
     }

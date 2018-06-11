@@ -1,4 +1,4 @@
-// pages/txl/txl.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -46,7 +46,7 @@ Page({
     var that = this;
    /*  发起接口请求--已办 */
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myTask&model=workflow&objname=&pageSize=20&type=myTask&userId=8ae08bac4235c9cf01423696a91708c6", 
+      url: app.globalData.urlPrefix +"mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myTask&model=workflow&objname=&pageSize=20&type=myTask&userId=8ae08bac4235c9cf01423696a91708c6", 
       data: {
         x: '',
         y: ''
@@ -69,7 +69,7 @@ Page({
 
     /*  发起接口请求 */
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myRelative&model=workflow&objname=&pageSize=20&type=myRelative&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myRelative&model=workflow&objname=&pageSize=20&type=myRelative&userId=8ae08bac4235c9cf01423696a91708c6",
       data: {
         x: '',
         y: ''
@@ -90,7 +90,7 @@ Page({
 
     /*  发起接口请求 */
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myNotice&model=workflow&objname=&pageSize=20&type=myNotice&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getWorkflowList&creator=&currentPage=1&key=myNotice&model=workflow&objname=&pageSize=20&type=myNotice&userId=8ae08bac4235c9cf01423696a91708c6",
       data: {
         x: '',
         y: ''
@@ -109,9 +109,6 @@ Page({
 
       }
     });
-
-
-
 
   },
 

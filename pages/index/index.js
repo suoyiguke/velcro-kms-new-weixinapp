@@ -1,5 +1,5 @@
 var indexUtils = require("index-utils.js");
-
+var app = getApp(); // 取得全局App
 // pages/lc/lc.js
 Page({
 

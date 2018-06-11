@@ -1,4 +1,5 @@
 var util = require("messagedetail-utils.js");
+var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -19,7 +20,7 @@ Page({
     console.log("消息id============="+id);
 
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getNotice&id="+id+"&model=Docbase&pageSize=20&userid=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getNotice&id="+id+"&model=Docbase&pageSize=20&userid=8ae08bac4235c9cf01423696a91708c6",
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },

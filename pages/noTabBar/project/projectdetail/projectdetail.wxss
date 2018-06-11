@@ -1,0 +1,40 @@
+.projectdetail-xmsx{
+
+   height: 76rpx;
+   line-height: 76rpx;
+   border: 1rpx solid #DDDDDD;
+   padding-left: 28rpx;
+   font-size: 18px;
+
+}
+
+
+.projectdetail-name{
+   height: 108rpx;
+   line-height: 108rpx;
+   border: 1rpx solid #DDDDDD;
+    padding-left: 28rpx;
+     font-size: 16px;
+     color: #444444;
+}
+
+.projectdetail-cy{
+   height: 108rpx;
+   line-height: 108rpx;
+   border: 1rpx solid #DDDDDD;
+    padding-left: 28rpx;
+     font-size: 16px;
+     color: #444444;
+}
+
+.projectdetail-name-text{
+   color: #AAAAAA;
+   float: right;
+   margin-right: 60rpx;
+}
+
+.projectdetail-cy-text{
+   color: #AAAAAA;
+   float: right;
+    margin-right: 60rpx;
+}

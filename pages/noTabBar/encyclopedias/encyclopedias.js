@@ -1,4 +1,4 @@
-// pages/noTabBar/encyclopedias/encyclopedias.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**

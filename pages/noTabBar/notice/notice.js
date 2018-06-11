@@ -1,3 +1,4 @@
+var app = getApp(); // 取得全局App
 Page({
 
   /**

@@ -1,4 +1,4 @@
-<include src="/commont/header/header.wxml" />
+﻿<include src="/commont/header/header.wxml" />
 <include src="/commont/serach/serach.wxml" />
 
 <block wx:for="{{expertList}}">
@@ -7,7 +7,7 @@
 
    <!-- 非空判断 -->
     <block wx:if="{{item.imageFile != void(0)}}">
-    <image class="expert-list-item-img" src="http://119.23.255.13:8098/ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imageFile}}"></image>
+    <image class="expert-list-item-img" src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imageFile}}"></image>
     </block>
     <!-- 默认图片 -->
     <block wx:else>

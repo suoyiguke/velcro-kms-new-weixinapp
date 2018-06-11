@@ -1,4 +1,4 @@
-// pages/noTabBar/message/messagedetail/vecle/vecle.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**

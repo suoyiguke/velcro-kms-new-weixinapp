@@ -1,4 +1,4 @@
-// pages/noTabBar/expert/expert.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -8,7 +8,8 @@ Page({
     title: "专家黄页列表",
     lastTitle:"返回",
     expertList: [],
-    returnPage: "returnLastPage" /* 默认的方法名--返回上一级  还有一个方法名 returnTopPage 返回至首层*/ 
+    returnPage: "returnLastPage", /* 默认的方法名--返回上一级  还有一个方法名 returnTopPage 返回至首层*/ 
+    urlPrefix: app.globalData.urlPrefix
   },
 
   /**
@@ -18,7 +19,7 @@ Page({
     var that = this;
     /* 专家列表*/
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getExpertList&creator=&currentPage=1&key=myTask&model=expert&objname=&pageSize=20&type=myTask&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getExpertList&creator=&currentPage=1&key=myTask&model=expert&objname=&pageSize=20&type=myTask&userId=8ae08bac4235c9cf01423696a91708c6",
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },
@@ -96,7 +97,7 @@ Page({
     console.log("专家id==>" + e.currentTarget.dataset.userid);
     /* 关注 */
     wx.request({
-      url: "http://119.23.255.13:8098/kms/common/attention/add.do",
+      url: app.globalData.urlPrefix+"kms/common/attention/add.do",
       data: {
         type: "expert",
         attentionId: e.currentTarget.dataset.id, /* 专家id */

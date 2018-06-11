@@ -5,16 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lastTitle: "",
-    title: "创建流程列表"
+    title: "项目详情",
+    lastTitle:"项目列表",
+    returnPage: "returnLastPage",
+    project:{}
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      lastTitle: options.lastTitle
+
+    var that = this;
+    console.log(options.projectId);
+    /* 发起接口请求--已办 */
+    wx.request({
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getProjectView&isread=1&model=projectview&objname=&pageSize=20&projectid=" + options.projectId+"&userId=8ae08bac4235c9cf01423696a91708c6",
+      data: {
+        x: '',
+        y: ''
+      },
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.project);
+
+        that.setData({
+         project: res.data.project
+        });
+      }
     });
   },
 
@@ -65,5 +85,10 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  }, /* 返回上层 */
+  returnLastPage: function () {
+    wx.navigateBack({
+      delta: 1
+    });
+  },
 })

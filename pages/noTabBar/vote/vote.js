@@ -1,4 +1,4 @@
-// pages/noTabBar/vote/vote.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**

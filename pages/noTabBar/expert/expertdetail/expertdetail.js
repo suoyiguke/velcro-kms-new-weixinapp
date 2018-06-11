@@ -1,4 +1,4 @@
-
+var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -34,7 +34,7 @@ Page({
       
     /* 发起接口请求--已办 */
     wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getExpertView&creator=&id=" + options.userId +"&key=myTask&model=pageinfo&pageSize=20&type=myTask",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getExpertView&creator=&id=" + options.userId +"&key=myTask&model=pageinfo&pageSize=20&type=myTask",
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },

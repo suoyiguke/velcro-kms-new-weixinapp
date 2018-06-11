@@ -24,7 +24,9 @@
     "pages/lc/taskdetails/opinion/opinion",
     "pages/noTabBar/message/messagedetail/messagedetail",
     "pages/noTabBar/message/messagedetail/vecle/vecle",
-    "pages/noTabBar/expert/expertdetail/expertdetail"
+    "pages/noTabBar/expert/expertdetail/expertdetail",
+    "pages/noTabBar/project/projectdetail/projectdetail",
+    "pages/noTabBar/interaction/interactiondetail/interaction"
   ],
   "window": {
     "backgroundTextStyle": "light",

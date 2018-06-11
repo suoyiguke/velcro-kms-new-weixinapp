@@ -1,4 +1,4 @@
-<!--pages/my/my.wxml-->
+﻿<!--pages/my/my.wxml-->
 <include src="/commont/header/header.wxml" />
 
 <!-- 个人信息 -->
@@ -6,7 +6,7 @@
   <view>
     <!-- 非空判断 -->
     <block wx:if="{{myFontIconList[13].imageFile != void(0)}}">
-      <image class="my-info-img" src="http://119.23.255.13:8098/ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{myFontIconList[13].imageFile}}"></image>
+      <image class="my-info-img" src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{myFontIconList[13].imageFile}}"></image>
     </block>
     <!-- 默认图片 -->
     <block wx:else>

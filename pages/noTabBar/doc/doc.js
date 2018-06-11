@@ -1,4 +1,4 @@
-// pages/noTabBar/doc/doc.js
+var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -29,7 +29,7 @@ Page({
     var urlx = "";
     //判断是不是专家详细页面过来查看该专家的所有文档的
     if (options.zjid != void (0)) {
-      urlx = "http://119.23.255.13:8098/mobile/execute.do?action=searchDocbase&currentPage=1&flag=1&model=DocbaseList&name=&pageSize=20&userId=" + options.zjid;
+      urlx = app.globalData.urlPrefix+"mobile/execute.do?action=searchDocbase&currentPage=1&flag=1&model=DocbaseList&name=&pageSize=20&userId=" + options.zjid;
       
     }else{
       //如果不是专家那来的，肯定是手动点击查看文档。这里需要返回首层！
@@ -42,7 +42,7 @@ Page({
       if (id == void (0)) {
         id = "";
       }
-      urlx = "http://119.23.255.13:8098/mobile/execute.do?action=getDocbaseList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&id=" + id + "&model=DocbaseList&pageSize=20";
+      urlx = app.globalData.urlPrefix +"mobile/execute.do?action=getDocbaseList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&id=" + id + "&model=DocbaseList&pageSize=20";
     }
 
     

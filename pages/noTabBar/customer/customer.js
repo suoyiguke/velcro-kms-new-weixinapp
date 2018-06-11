@@ -1,4 +1,4 @@
-// pages/noTabBar/customer /customer .js
+var app = getApp(); // 取得全局App
 Page({
 
   /**
