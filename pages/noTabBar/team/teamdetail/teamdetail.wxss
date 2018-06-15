@@ -1,0 +1,109 @@
+.teamdetail-item-Unchecked {
+  height: 140rpx;
+  position: relative;
+
+
+}
+.teamdetail-item-select {
+  height: 140rpx;
+  
+  border-bottom: 1rpx solid #ddd;
+  position: relative;
+  background-color: #D9D9D9;
+
+}
+
+
+.teamdetail-item-img {
+  width: 110rpx;
+  height: 110rpx;
+  margin: auto 0;
+  background-color: pink;
+  margin-left: 20rpx;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -55rpx;
+}
+
+.teamdetail-item-info {
+  height: 110rpx;
+  margin-left: 180rpx;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -55rpx;
+}
+
+.teamdetail-item-info-title {
+  font-size: 32rpx;
+  font-weight: bold;
+    display: block;
+
+}
+
+.teamdetail-item-info-lb {
+   font-size: 31rpx;
+   display: block;
+
+}
+
+.teamdetail-info{
+  height: 200rpx;
+  border: pink;
+  font-size:25rpx;
+  color: #333333;
+  line-height:38rpx;
+  padding-left: 20rpx;
+  margin-top: 10rpx;
+
+}
+
+
+
+
+
+.teamdetail-person-item-Unchecked{
+
+ height: 140rpx;
+ position: relative;
+ border-top: 1rpx solid #ddd;
+ border-bottom: 1rpx solid #ddd;
+}
+.teamdetail-person-item-select{
+   height: 140rpx;
+ position: relative;
+ border-top: 1rpx solid #ddd;
+ border-bottom: 1rpx solid #ddd;
+   background-color: #D9D9D9;
+}
+
+
+.teamdetail-person-item-img{
+
+  height: 110rpx;
+  width: 110rpx;
+  background-clip: pink;
+  position: absolute;
+  top: 50%;
+  margin-top: -55rpx;
+  margin-left: 20rpx;
+}
+.teamdetail-person-item-name{
+  position: absolute;
+  font-weight: bold;
+  font-size: 30rpx;
+  top:50rpx;
+  left: 180rpx;
+
+  
+}
+
+.teamdetail-doc-item-name{
+  position: absolute;
+  font-weight: bold;
+  font-size: 30rpx;
+  top:50rpx;
+  left:20rpx;
+
+}

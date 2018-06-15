@@ -1,4 +1,6 @@
 var app = getApp(); // 取得全局App
+/* 引入富文本插件 */
+var WxParse = require('../../../../plugin/wxParse/wxParse.js');
 Page({
 
   /**
@@ -40,6 +42,11 @@ Page({
         that.setData({
           questionList: res.data
         });
+        
+        /* 问题内容的富文本解析 */
+        WxParse.wxParse('article', 'html', that.data.questionList.searchBean.content, that, 5);
+
+
       }
     });
 
@@ -55,13 +62,129 @@ Page({
         'content-type': 'application/json;utf-8' // 默认值
       },
       success: function (res) {
+
+        
+
+/*        var article= '<div>我是HTML代码</div>';
+ */        /** 
+        * WxParse.wxParse(bindName , type, data,target,imagePadding) 
+        * 1.bindName绑定的数据名(必填) 
+        * 2.type可以为html或者md(必填) 
+        * 3.data为传入的具体数据(必填) 
+        * 4.target为Page对象,一般为this(必填) 
+        ** 5.imagePadding为当图片自适应是左右的单一padding(默认为0,可选) 
+        */
+/*         var that = this;
+        WxParse.wxParse('article', 'html', article, that, 5);
+ */
+
         console.log(res.data);
         that.setData({
           answerList: res.data
         });
-      }
-    });
+        console.log("===============xxx===================");
+        console.log(that.data.answerList.pageBean.recordList);
+        
+        /*  数组--获得html内容 */
+        var replyArr = [];
+
+        /* 遍历 */
+        that.data.answerList.pageBean.recordList.forEach((item,index) => {
+          replyArr.push(item.content);
+         
+        });
+        /* 循环结束 */
+
+       /*  遍历数组--多数据解析 */
+        replyArr.forEach((item, index) => {
+          WxParse.wxParse('reply' + index, 'html', replyArr[index], that);
+          if (index === replyArr.length - 1) {
+            WxParse.wxParseTemArray("replyTemArray", 'reply', replyArr.length, that)
+          }
+          console.log("===============yyy1===================");
+          console.log(that.data.replyTemArray);
+        });
+      /* 循环结束 */
+      
+       /* 遍历 answerList 回复列表，将富文本的数组添加进去 */
     
+        that.data.answerList.pageBean.recordList.forEach((item, index) => {
+          console.log("===========uu=========");
+          console.log(item);
+          item.reply = that.data.replyTemArray[index];
+
+        });
+      /* 循环结束 */
+
+        console.log("===========zz=========");
+        console.log(that.data.answerList.pageBean.recordList);
+        that.setData({
+          answerList: that.data.answerList
+        });
+
+
+
+      }
+      /* success结束 */
+
+    });
+
+  /* 请求结束 */
+
+    /* 请求喜欢数 --需要延迟10s因为js是异步的*/
+    var replyLikeNumArray = [];
+    setTimeout(function () {
+    console.log("oooooooooooooooooooooooooooooooooooooooo");
+    console.log(that.data.answerList.pageBean.recordList);
+
+    that.data.answerList.pageBean.recordList.forEach((item, index) => {
+      wx.request({
+        url: app.globalData.urlPrefix +"kms/common/updown/getCount.do",
+        data: {
+          "objid": item.id,
+          "module": "reply",
+          "type": "up"
+        },
+        method: "POST",
+        header: {
+          'content-type': 'application/json;utf-8' // 默认值
+        },
+        success: function (res) {
+
+          console.log(res.data);
+          item.replyLikeNum = res.data.msg;
+        }
+      });
+    });
+
+    that.setData({
+      answerList: that.data.answerList
+    });
+
+    }, 5000);
+
+
+/* wx.request({
+  url: "http://119.29.176.106:8090/kms/common/updown/getCount.do",
+  data: {
+    objId: item.id,
+    module: 'reply',
+    type: "up"
+  },
+  method: "POST",
+  header: {
+    'content-type': 'application/json;utf-8' // 默认值
+  },
+  success: function (res) {
+
+    console.log(res.data);
+  }
+}); */
+    /* 请求结束 */
+
+
+
+
   },
 
   /**

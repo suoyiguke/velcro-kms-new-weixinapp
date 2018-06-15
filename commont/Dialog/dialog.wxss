@@ -20,12 +20,13 @@
         background-color: #FFFFFF;
         text-align: center;
         overflow: hidden;
-        height:325rpx;
+        height:290rpx;
+        padding-bottom: 20rpx;
 
     }
     .wx-dialog-title{
-        font-size: 18px;
-        padding: 15px 15px 5px;
+        font-size: 36rpx;
+        padding: 5rpx 5rpx 15px 15px;
     }
     .wx-dialog-content{
       text-align: left;
@@ -35,8 +36,8 @@
         display: flex;
         align-items: center;
         position: relative;
-        line-height: 45px;
-        font-size: 17px;
+        line-height: 90rpx;
+        font-size: 34rpx;
     }
     .wx-dialog-footer::before{
         content: '';
@@ -86,10 +87,9 @@ height:150rpx;
 width:560rpx;
 border:1px solid #D5D5D6;
 border-radius:5px;
-font-size:14px;
+font-size:28rpx;
 position:relative;
 left:20rpx;
-top:20rpx;
 
 
 

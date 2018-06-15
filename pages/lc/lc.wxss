@@ -10,7 +10,7 @@
 
 .lc-list-bh{
   margin-bottom: 20rpx;
-  font-size: 13px;
+  font-size: 26rpx;
 }
 .lc-list-title{
  margin-bottom: 20rpx;
@@ -19,7 +19,7 @@
 .lc-list-item{
   
  margin-bottom: 20rpx;
- font-size: 13px;
+ font-size: 26rpx;
 }
 .lc-list-item-author{
   display: inline-block;
@@ -56,6 +56,6 @@
   text-align: center;
   line-height: 74rpx;
   border: 2rpx solid #DDDDDD;
-  font-size: 16px;
+  font-size: 32rpx;
 
 }

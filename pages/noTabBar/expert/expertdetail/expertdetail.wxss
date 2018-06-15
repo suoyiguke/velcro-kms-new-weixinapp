@@ -45,6 +45,7 @@
 .myicon{
   position: relative;
   left: 30rpx;
+  top:0rpx;
 
 }
 
@@ -54,7 +55,7 @@
   position: relative;
   left: 50rpx;
   bottom: 6rpx;
-  font-size: 18px;
+  font-size: 36rpx;
 }
 
 
@@ -82,5 +83,5 @@
   color: #B2B2B2;
   float: right;
   margin-right: 20rpx;
-   font-size: 18px;
+   font-size: 36rpx;
 }

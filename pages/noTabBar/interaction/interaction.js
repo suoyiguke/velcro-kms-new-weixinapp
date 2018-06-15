@@ -1,4 +1,6 @@
 var app = getApp(); // 取得全局App
+var utils = require("../../../utils/util.js"); //取得全局工具js
+
 Page({
 
   /**
@@ -40,14 +42,7 @@ Page({
       },
       success: function (res) {
         //截取字符串
-        res.data.pageBean.recordList.forEach((item) => {
-          if (item.title == void (0) || (item.title == '')) {
-            return true;/* 跳过此次循环 */
-          }
-          if (item.title.length > 15) {
-            item.title = item.title.substring(0, 15) + "...";
-          }
-        });
+        utils.subString(res.data.pageBean.recordList, "title");
 
         console.log(res.data.pageBean.recordList);
         that.setData({
@@ -73,14 +68,7 @@ Page({
       },
       success: function (res) {
         //截取字符串
-        res.data.pageBean.recordList.forEach((item) => {
-          if (item.title == void (0) || (item.title == '')) {
-            return true;/* 跳过此次循环 */
-          }
-          if (item.title.length > 15) {
-            item.title = item.title.substring(0, 15) + "...";
-          }
-        });
+        utils.subString(res.data.pageBean.recordList, "title");
 
         if (that.data.recordListWjj === undefined || that.data.recordListWjj.length == 0) {
           console.log("===============数组1为空");
@@ -116,14 +104,7 @@ Page({
       },
       success: function (res) {
         //截取字符串
-        res.data.pageBean.recordList.forEach((item) => {
-          if (item.title == void (0) || (item.title == '')) {
-            return true;/* 跳过此次循环 */
-          }
-          if (item.title.length > 15) {
-            item.title = item.title.substring(0, 15) + "...";
-          }
-        });
+        utils.subString(res.data.pageBean.recordList, "title");
 
         console.log(res.data.pageBean.recordList);
         that.setData({
@@ -151,14 +132,7 @@ Page({
       },
       success: function (res) {
         //截取字符串
-        res.data.pageBean.recordList.forEach((item) => {
-          if (item.title == void (0) || (item.title == '')) {
-            return true;/* 跳过此次循环 */
-          }
-          if (item.title.length > 15) {
-            item.title = item.title.substring(0, 15) + "...";
-          }
-        });
+        utils.subString(res.data.pageBean.recordList, "title");
 
         console.log(res.data.pageBean.recordList);
         that.setData({
@@ -171,6 +145,11 @@ Page({
     });
 
    
+   //接收从其他页面直接跳转过来的行为： 比如 点击个人信息的"我的待答"
+    if (options.param == "option3"){
+      this.selectOption3();
+   }
+
 
   },
 

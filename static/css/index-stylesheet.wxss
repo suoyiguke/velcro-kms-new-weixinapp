@@ -7,7 +7,7 @@
 
 .iconfont {
     font-family:"iconfont" !important;
-    font-size:24px;/* 字体图标大小 */
+    font-size:48rpx;/* 字体图标大小 */
     font-style:normal;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

@@ -5,7 +5,7 @@
   height: 88rpx;
   line-height: 88rpx;
   color:#FFFFFF;
-  font-size: 17px;
+  font-size: 34rpx;
   position: fixed;
   width: 100%;
   z-index:2;
@@ -21,8 +21,8 @@
 .head-return-icon{
   position: absolute;
   left:15rpx;
-  bottom: 4rpx;
-  font-size:56rpx;
+  bottom: 5rpx;
+  font-size:48rpx;
   font-weight: bold;
 
 }

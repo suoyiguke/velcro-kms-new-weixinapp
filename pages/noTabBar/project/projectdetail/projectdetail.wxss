@@ -4,7 +4,7 @@
    line-height: 76rpx;
    border: 1rpx solid #DDDDDD;
    padding-left: 28rpx;
-   font-size: 18px;
+   font-size: 36rpx;
 
 }
 
@@ -14,7 +14,7 @@
    line-height: 108rpx;
    border: 1rpx solid #DDDDDD;
     padding-left: 28rpx;
-     font-size: 16px;
+     font-size: 32rpx;
      color: #444444;
 }
 
@@ -23,7 +23,7 @@
    line-height: 108rpx;
    border: 1rpx solid #DDDDDD;
     padding-left: 28rpx;
-     font-size: 16px;
+     font-size: 32rpx;
      color: #444444;
 }
 

@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    lastTitle: "", /* 上一个页面标题 */
+    lastTitle: "流程", /* 上一个页面标题 */
     title: "任务详情",
     hide: "",
     updatecolor:"",
@@ -21,7 +21,8 @@ Page({
       { bindtap: 'Menu2', txt: "退出" },
       { bindtap: 'Menu3', txt: '查看流程图' }
     ],
-    background:[]
+    background: [],
+    returnPage: "returnLastPage", /* returnLastPage--返回上一级  还有一个方法名 returnTopPage 返回至首层*/ 
 
   },
 
@@ -29,9 +30,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      lastTitle: options.title
-    });
+
 
   },
 
@@ -203,6 +202,11 @@ Page({
         background: array
       });
     }
+  },  /* 返回上层 */
+  returnLastPage: function () {
+    wx.navigateBack({
+      delta: 1
+    });
   }
 
 })

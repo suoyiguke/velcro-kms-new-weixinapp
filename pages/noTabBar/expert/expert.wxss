@@ -34,7 +34,7 @@ background-color: #E2E2E2 ;
   position: absolute;
   top:20rpx;
   left: 120rpx;
-  font-size: 16px;
+  font-size: 32rpx;
   font-weight: bold;
 }
 
@@ -44,7 +44,7 @@ background-color: #E2E2E2 ;
   top:80rpx;
   left: 120rpx;
 
-  font-size: 14px;
+  font-size: 28rpx;
   color: #444444;
   
 }
@@ -60,7 +60,7 @@ background-color: #E2E2E2 ;
   border: 1px solid #6EA1F7;
   border-radius:3px;
 
-  font-size: 18px;
+  font-size: 36rpx;
 
 }
 
@@ -76,6 +76,6 @@ background-color: #E2E2E2 ;
   border: 1px solid #AFACAC;
   border-radius:3px;
 
-  font-size: 18px;
+  font-size: 36rpx;
 
 }

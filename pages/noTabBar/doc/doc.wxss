@@ -8,7 +8,7 @@
   margin-top: -40rpx; 
 }
 
-.article-item-title{
+.article-item-title-ar{
   position: absolute;
    top: -15rpx;
    left: 130rpx; 
@@ -19,14 +19,14 @@
    top: 20rpx;
    left: 130rpx; 
    color: #787878;
-   font-size: 14px;
+   font-size: 28rpx;
 }
 .article-item-author{
    position: absolute;
    top: 20rpx;
    left: 400rpx; 
    additive-symbols: #787878;
-   font-size: 14px;
+   font-size: 28rpx;
    color:#787878;
 
 
@@ -42,24 +42,24 @@
 
 .bc-unchecked{
   background-color: #FFFFFF;
-  border: 1px solid #DDDDDD;
+  border: 1rpx solid #DDDDDD;
   height: 120rpx;
 
   padding-left: 25rpx;
   line-height: 120rpx;
-  font-size: 16px;
+  font-size: 32rpx;
 
     position:  relative;
 
   }
   .bc-select{
   background-color: #DDDDDD;/* 背景颜色 */
-  border: 1px solid #DDDDDD;
+  border: 1rpx solid #DDDDDD;
   height: 120rpx;
 
   padding-left: 25rpx;
   line-height: 120rpx;
-  font-size: 16px;
+  font-size: 32rpx;
 
   position:  relative;
 

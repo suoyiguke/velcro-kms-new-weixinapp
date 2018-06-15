@@ -1,1 +1,81 @@
-/* pages/noTabBar/encyclopedias/encyclopedias.wxss */
+
+.article-item-img{
+  width: 80rpx;
+  height: 80rpx;
+
+  position: absolute;
+  top: 50%;
+  margin-top: -40rpx; 
+}
+
+.article-item-title-ar{
+  position: absolute;
+   left: 130rpx; 
+}
+
+.article-item-time{
+    position: absolute;
+   top: 20rpx;
+   left: 130rpx; 
+   color: #787878;
+   font-size: 28rpx;
+}
+.article-item-author{
+   position: absolute;
+   top: 20rpx;
+   left: 400rpx; 
+   additive-symbols: #787878;
+   font-size: 28rpx;
+   color:#787878;
+
+
+}
+
+/* pages/lc/lc.wxss */
+
+
+.lc-list-one{
+
+
+}
+
+.bc-unchecked{
+  background-color: #FFFFFF;
+  border: 1rpx solid #DDDDDD;
+  height: 120rpx;
+
+  padding-left: 25rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+
+    position:  relative;
+
+  }
+  .bc-select{
+  background-color: #DDDDDD;/* 背景颜色 */
+  border: 1rpx solid #DDDDDD;
+  height: 120rpx;
+
+  padding-left: 25rpx;
+  line-height: 120rpx;
+  font-size: 32rpx;
+
+  position:  relative;
+
+  }
+
+
+
+
+.triangle-facing-right-doc{
+       display: inline-block;  
+        border-right: 8rpx solid #CCCCCC;
+        border-bottom: 8rpx solid #CCCCCC;  
+        width: 25rpx; height: 25rpx;  
+        transform: rotate(-45deg);  
+
+        position: absolute;
+        left: 660rpx;
+        top: 50rpx; 
+}
+

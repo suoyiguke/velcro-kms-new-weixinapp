@@ -1,0 +1,98 @@
+
+/* 导入我的版块的字体图标 */
+@import "/static/css/my-stylesheet.wxss";
+@import"/plugin/wxParse/wxParse.wxss";
+
+.dd-one{
+ height: 144rpx;
+ line-height: 144rpx;
+ border: 2rpx solid #DDDDDD;
+
+}
+.dd-one-img{
+  width: 80rpx;
+  height: 80rpx;
+  display: inline-block;
+  margin-top:30rpx;
+margin-left:30rpx;
+
+
+}
+
+.dd-one-text{
+  float: right;
+  margin-right: 20rpx;
+  }
+
+  .dd-two{
+
+    height: 68rpx;
+    border-bottom: 2rpx solid #DDDDDD;
+
+  }
+
+.myicon-zy{
+color:#000;
+font-size:30rpx;
+
+
+
+}
+
+.en-zy{
+  margin: 0 auto;
+  border-top: 2rpx solid #DDDDDD;
+  border-bottom: 2rpx solid #DDDDDD;
+  background-color: #F5F5F5;
+  height: 76rpx;
+  line-height: 76rpx;
+  padding-left: 20rpx;
+}
+
+.dd-item{
+  height: 190rpx;
+  border: 2rpx solid #DDDDDD;
+  position: relative;
+
+}
+
+.dd-item-img{
+  width: 80rpx;
+  height: 80rpx;
+  position: absolute;
+left:25rpx;
+top:35rpx;
+border-radius: 50%;
+
+}
+.dd-item-user{
+  position: absolute;
+ left:140rpx;
+
+top:30rpx;
+font-size: 32rpx;
+
+  
+}
+.dd-item-time{
+  position: absolute;
+left:140rpx;
+
+top:76rpx;
+
+
+font-size: 20rpx;
+color: #666;
+
+
+}
+.dd-item-text{
+
+position: absolute;
+left:140rpx;
+
+top:110rpx;
+
+font-size: 28rpx;
+
+}

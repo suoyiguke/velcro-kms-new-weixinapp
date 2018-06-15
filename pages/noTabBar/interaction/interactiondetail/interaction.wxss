@@ -1,54 +1,46 @@
 @import "/static/css/my-stylesheet.wxss";
+/* 富文本样式 */
+@import"/plugin/wxParse/wxParse.wxss";
 
 .interaction-one{
 
   line-height: center;
 }
 .interaction-one-lm{
-  width: 94%;
-  height:  300rpx;
-  margin: 20rpx auto;
-
+  width:97%;
   position: relative;
 }
 
  .interaction-one-lm-title{
 
-  position: relative;
-  top:10rpx;
-  left: -2rpx;
-  font-size: 18px;
-  height: 40rpx;
-  display: inline-block;
+position:relative;
+top:10rpx;
+left:20rpx;
+font-size:40rpx;
+display:inline-block;
+
  }
 
 .interaction-one-lm-time{
-position:absolute;
-top:60rpx;
 
-left:0rpx;
-font-size:14px;
+position:absolute;
+top:20rpx;
+left:20rpx;
+
 
 }
 
  .interaction-one-lm-person{
+position:absolute;
+top:60rpx;
+left:20rpx;
 
-  position:absolute;
-top:100rpx;
-left:0rpx;
-font-size:14px;
 
  }
 
  .interaction-one-lm-pp{
-    width: 94%;
-    position:absolute;
-   height: 150rpx;
- top:130rpx;
-left:0rpx;
-
- margin: 20rpx auto;
- border-bottom: 1px solid #9A9A9A;
+width:97%;
+height:150rpx;
 
  }
 
@@ -56,49 +48,57 @@ left:0rpx;
 height:80rpx;
 width:80rpx;
 position:absolute;
-top:40rpx;
-left:20rpx;
+top:120rpx;
+left:40rpx;
+
 
  }
 
  .interaction-one-lm-pp-text{
-position:absolute;
-top:40rpx;
-left:120rpx;
-font-size: 16px;
+
 font-weight: bold;
+position:absolute;
+top:120rpx;
+left:140rpx;
+
+
 
  }
 
  
 .expert-list-item-gz{
-position:absolute;
-top:45rpx;
-left:550rpx;
-height:52rpx;
-width:100rpx;
+height:42rpx;
+width:82rpx;
 text-align:center;
 color:#6EA1F7;
 border:1px solid #6EA1F7;
 border-radius:3px;
-font-size:18px;
+position:absolute;
+top:120rpx;
+left:560rpx;
+font-size:30rpx;
+
+
 
 
 }
 
 
 .expert-list-item-qg{
-  position: absolute;
+/*   position: absolute;
   top: 45rpx;
-  left: 600rpx;
+  left: 600rpx; */
+
+
   height: 52rpx;
   width: 112rpx;
   text-align: center;
   color: #AFACAC;
   border: 1px solid #AFACAC;
   border-radius:3px;
+  font-size: 36rpx;
 
-  font-size: 18px;
+  position:absolute;
 
 }
 
@@ -108,10 +108,17 @@ font-size:18px;
 }
 
 .interaction-two-lm{
-  width: 94%;
-  margin: 20rpx auto;
-  position: relative;
-  border-bottom: 1px solid #9A9A9A;
+width:97%;
+position:relative;
+border-top:1px solid #9A9A9A;
+border-bottom:1px solid #9A9A9A;
+min-height:200rpx;
+margin:0rpx auto;
+padding-bottom:50rpx;
+
+
+
+
 
 }
 
@@ -122,39 +129,43 @@ font-size:18px;
 position:relative;
 top:20rpx;
 left:0rpx;
-padding-left: 20rpx;
+
+
+
 
 }
 
 .interaction-there{
   position: relative;
    line-height: center;
-   min-height:  500rpx;
+   min-height:  200rpx;
 }
 
 .interaction-there-lm{
-  width: 94%;
-  margin: 20rpx auto;
+
   position: relative;
-  border-bottom: 1px solid #9A9A9A;
+  margin-bottom: 50rpx;
 
 }
 
 .interaction-there-lm-title{
 
-    font-size: 15px;
-    font-weight: bold;
-    border-left: 4px solid #0094ff;
-    padding-left: 20rpx;
-    margin-bottom: 20rpx;
-    position: relative;
+font-size:30rpx;
+font-weight:bold;
+border-left:4px solid #0094ff;
+padding-left:20rpx;
+margin-bottom:20rpx;
+position:relative;
+top:20rpx;
+left:10rpx;
+
 
 }
 
 .interaction-there-lm-top{
-  width: 714rpx;
   height: 148rpx;
   position:relative;
+  margin-top: 20rpx;
 }
 
 .interaction-there-lm-top-img{
@@ -170,14 +181,18 @@ left:20rpx;
 position:absolute;
 left:550rpx;
 top:20rpx;
+font-size: 36rpx;
 
 }
 .interaction-there-lm-top-xh{
 position:absolute;
-width:40rpx;
-height:40rpx;
+width:42rpx;
+height:38rpx;
 left:596rpx;
-top:18rpx;
+top:16rpx;
+
+
+
 
 
 }
@@ -186,9 +201,11 @@ top:18rpx;
 .interaction-there-lm-top-xh-num{
 
 position:absolute;
-left:642rpx;
-top:19rpx;
-font-size:14px;
+left:632rpx;
+top:38rpx;
+font-size:20rpx;
+
+
 
 
 
@@ -198,7 +215,7 @@ font-size:14px;
 position:absolute;
 left:140rpx;
 top:19rpx;
-font-size:14px;
+font-size:28rpx;
 
 }
 
@@ -206,17 +223,18 @@ font-size:14px;
 position:absolute;
 left:140rpx;
 top:80rpx;
-font-size:12px;
+font-size:24rpx;
 color: #9A9A9A;
 
 }
 
 .interaction-there-lm-content{
-position:relative;
-top:-50rpx;
-left:0rpx;
+min-height:100rpx;
+padding-bottom:50rpx;
+margin-left: 30rpx;
 
-padding-left:20rpx;
+
+
 
 }
 
@@ -250,7 +268,7 @@ padding-left:20rpx;
 }
 .myicon{
 color:#B1AFAF;
-font-size:25px;
+font-size:50rpx;
 position:absolute;
 left:668rpx;
 top:25rpx;
@@ -259,13 +277,18 @@ top:25rpx;
 }
 
 .mycss{
-  position: relative;
+position:relative;
+top:-0rpx;
+font-size:28rpx;
+height:240rpx;
+
+
 
 }
 
 .interaction-there-lm-xx{
-    position: relative;
-    min-height:200rpx;
+   width:97%;
+    margin: 0 auto;
     border-bottom: 1px solid #C3C1C1;
 }
 
@@ -273,13 +296,11 @@ top:25rpx;
 height:540rpx;
   border-top: 0.5rpx solid #B0B7BC;
   border-bottom: 0.5rpx solid #B0B7BC;
-
   position:fixed;
   width:100%;
   z-index:2;
-
   left: 20rpx;
-top:1090rpx;
+  top:1090rpx;
 
 background-color: #fff;
 
@@ -292,4 +313,36 @@ background-color: #fff;
 
 .interaction-placeholde{
   padding-left: 20rpx;
+}
+
+.interaction-one-lm-hd-img{
+
+  height:80rpx;
+width:80rpx;
+position:absolute;
+top:10rpx;
+left:40rpx;
+
+}
+
+.interaction-there-lm-content-hf{
+  width: 568rpx;
+  height: 100rpx;
+  margin:  0 auto;
+  font-size: 28rpx;
+  background-color: #EEEEEE;
+  margin-top: 20rpx;
+}
+
+.interaction-there-lm-content-hf-user{
+  font-size: 28rpx;
+  color: #4385F5;
+}
+
+.interaction-there-lm-content-hf-time{
+  margin-left: 50rpx;
+  font: 12px;
+  color: #B1AEAE;
+
+
 }

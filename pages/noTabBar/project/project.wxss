@@ -21,7 +21,7 @@
   border-right: 1px solid #DDDDDD;
   line-height: 164rpx;
   padding-left: 26rpx;
-  font-size: 16px;
+  font-size: 32rpx;
   position: relative;
 
 
@@ -35,7 +35,7 @@
   border-right: 1px solid #DDDDDD;
   line-height: 164rpx;
   padding-left: 26rpx;
-  font-size: 16px;
+  font-size: 32rpx;
 
  position: relative;
 

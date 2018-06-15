@@ -1,4 +1,5 @@
 var app = getApp(); // 取得全局App
+var utils = require("../../../utils/util.js"); //取得全局工具js
 Page({
 
   /**
@@ -18,13 +19,46 @@ Page({
   onLoad: function (options) {
     var that = this;
 
+    //从用户信息页面直接跳转过来查看本人的文档,而且是复杂版块
+    if (options.param == "mydoc"){
+      that.setData({
+        isSimple: false
+      });
+
+      wx.request({
+        url: app.globalData.urlPrefix + "mobile/execute.do?action=searchDocbase&currentPage=1&flag=1&model=DocbaseList&name=&pageSize=20&userId=" + app.globalData.userId,
+        data: {
+          x: '',
+          y: ''
+        },
+        header: {
+          'content-type': 'application/json;utf-8' // 默认值
+        },
+        success: function (res) {
+          console.log("mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm");
+          console.log(res.data);
+
+          //截取字符串
+          utils.subString(res.data.pageBean.recordList,"name");
+
+
+          that.setData({
+            dac1List: res.data.pageBean.recordList
+          });
+
+        }
+      });
+
+/*       进入了这种准备数据模式，则下面的代码就不用执行了！
+ */      return;
+
+    }
+
     if (options.lastTitle != void (0) || options.lastTitle != ""){
       that.setData({
         lastTitle: options.lastTitle
       });
-
     }
-
 
     var urlx = "";
     //判断是不是专家详细页面过来查看该专家的所有文档的
@@ -60,15 +94,7 @@ Page({
         console.log(res.data.pageBean.recordList);
 
         //截取字符串
-        res.data.pageBean.recordList.forEach((item) => {
-          if (item.name == void (0) || (item.name == '')) {
-            return true;/* 跳过此次循环 */
-          }
-          if (item.name.length>15){
-            item.name = item.name.substring(0, 15) + "...";
-          }
-        });
-
+        utils.subString(res.data.pageBean.recordList, "name");
 
         that.setData({
         
@@ -167,6 +193,12 @@ Page({
     console.log("======id==========="+e.target.id);
     wx.navigateTo({
       url: "/pages/noTabBar/doc/doc?id=" + e.target.id
+    });
+  },
+  /* 点击article文档跳转 */
+  articleItemTap:function(e){
+    wx.navigateTo({
+      url: "/pages/noTabBar/doc/docDetail/docDetail?docId=" + e.currentTarget.dataset.docid
     });
   }
 })

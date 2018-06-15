@@ -26,7 +26,12 @@
     "pages/noTabBar/message/messagedetail/vecle/vecle",
     "pages/noTabBar/expert/expertdetail/expertdetail",
     "pages/noTabBar/project/projectdetail/projectdetail",
-    "pages/noTabBar/interaction/interactiondetail/interaction"
+    "pages/noTabBar/interaction/interactiondetail/interaction",
+    "pages/noTabBar/team/teamdetail/teamdetail",
+    "pages/noTabBar/team/teamdetail/teamdoc/teamdoc",
+    "pages/noTabBar/encyclopedias/enDetail/enDetail",
+    "pages/noTabBar/doc/docDetail/docDetail",
+    "pages/my/follow/follow"
   ],
   "window": {
     "backgroundTextStyle": "light",

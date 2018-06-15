@@ -1,1 +1,54 @@
-/* pages/noTabBar/team/team.wxss */
+.team-item-Unchecked {
+  height: 140rpx;
+  border-bottom: 1rpx solid #ddd;
+  position: relative;
+
+
+}
+.team-item-select {
+  height: 140rpx;
+  border-bottom: 1rpx solid #ddd;
+  position: relative;
+   background-color: #D9D9D9;
+
+}
+
+
+.team-item-img {
+  width: 110rpx;
+  height: 110rpx;
+  margin: auto 0;
+  background-color: pink;
+  margin-left: 20rpx;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -55rpx;
+}
+
+.team-item-info {
+  height: 110rpx;
+  margin-left: 180rpx;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  margin-top: -55rpx;
+}
+
+.team-item-info-title {
+  font-size: 32rpx;
+  font-weight: bold;
+    display: block;
+
+}
+
+.team-item-info-lb {
+   font-size: 31rpx;
+   display: block;
+
+}
+
+.team-item-info-time {
+   font-size: 25rpx;
+   display: block;
+}

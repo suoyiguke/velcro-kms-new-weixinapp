@@ -1,2 +1,16 @@
-<!--pages/noTabBar/team/team.wxml-->
-<text>pages/noTabBar/team/team.wxml</text>
+<!--pages/lc/addflow/addflow.wxml-->
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml"/>
+
+<block wx:for="{{teamList}}" >
+
+<view data-teamid="{{item.id}}" hover-class="team-item-select" class="team-item-Unchecked" bind:tap="itemTap">
+<image src='{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.virtuallogo}}' class='team-item-img'></image>
+<view class='team-item-info'>
+<text class='team-item-info-title'>{{item.teamname}}</text>
+<text class='team-item-info-lb'>{{item.summary}}</text>
+<text class='team-item-info-time'>{{item.createor}}创建于{{item.createtime
+}}</text>
+</view>
+</view>
+</block>

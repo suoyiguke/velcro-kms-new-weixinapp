@@ -21,7 +21,7 @@
 }
 
 .opinion-list-item-sm-1{
- font-size: 14px;
+ font-size: 28rpx;
  position: absolute;
 
  left: 10rpx;
@@ -29,7 +29,7 @@
 }
 
 .opinion-list-item-sm-2{
-   font-size: 14px;
+   font-size: 28rpx;
    position: absolute;
     left: 250rpx;
  top: 10rpx;
@@ -37,7 +37,7 @@
 }
 
 .opinion-list-item-sm-3{
- font-size: 14px;
+ font-size: 28rpx;
    position: absolute;
     left: 550rpx;
  top: 10rpx;
@@ -48,12 +48,12 @@
  left: 10rpx;
  top: 50rpx;
  color: #9D9D9D;
- font-size: 18px;
+ font-size: 72rpx;
 
 }
 
 .opinion-list-item-sm-5{
- font-size: 14px;
+ font-size: 28rpx;
    position: absolute;
     left: 10rpx;
  top: 120rpx;

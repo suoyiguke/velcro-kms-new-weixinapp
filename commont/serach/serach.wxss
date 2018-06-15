@@ -49,7 +49,7 @@
 .weui-search-bar__input {
   height: 28px;
   line-height: 28px;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 
 

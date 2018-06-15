@@ -159,21 +159,6 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },/* 触摸变色 */
-  itemTouchStart: function (e) {
-    console.log("触摸开始=============");
-     var id = e.target.id;
-     console.log(id);
-
-    
-
-  }
-  ,/* 触摸变色 */
-  itemTouchEnd: function (e) {
-    console.log(e.currentTarget);
-   
-  
-    console.log("触摸结束=============");
   },
   itemTap: function(e) {
    

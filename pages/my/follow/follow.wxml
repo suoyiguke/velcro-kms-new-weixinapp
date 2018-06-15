@@ -1,0 +1,36 @@
+<!-- 引入标题 -->
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml"/>
+<include src="/commont/tab/tab.wxml"/>
+
+<!-- tab切换 -->
+<view class="{{option1?'show':'hidden'}}">
+
+<block wx:for="{{expertList}}">
+
+  <view  hover-class="expert-list-item-select"  class="expert-list-item-unchecked" bind:tap="itemtapExpert" data-userid="{{item.id}}">
+
+   <!-- 非空判断 -->
+    <block wx:if="{{item.imageFile != void(0)}}">
+    <image class="expert-list-item-img" src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imageFile}}"></image>
+    </block>
+    <!-- 默认图片 -->
+    <block wx:else>
+    <image class="expert-list-item-img" src="/static/img/user.gif"></image>
+    </block>
+
+    <view class="expert-list-item-name">{{item.userName}}</view>
+    <!-- 非空判断 -->
+    <block wx:if="{{item.description != void(0)}}">
+      <view class="expert-list-item-jj">{{item.description}}</view>
+    </block>
+      <view class="expert-list-item-gz" bind:tap="expertGz" data-userid="{{item.userId}}">关注</view>
+<!--       <view class="expert-list-item-qg" bind:tap="expertQg">取关</view>
+ -->
+  </view>
+
+</block>
+</view>
+<view class="{{option2?'show':'hidden'}}">
+<include src="/pages/noTabBar/interaction/interaction_template.wxml"/>
+</view>

@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    urlPrefix: app.globalData.urlPrefix,
     title: "专家详细信息",
     lastTitle:"专家列表",
     returnPage: "returnLastPage", /* 默认的方法名--返回上一级  还有一个方法名 returnTopPage 返回至首层*/ 

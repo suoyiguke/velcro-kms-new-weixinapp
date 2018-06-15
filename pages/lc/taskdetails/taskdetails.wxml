@@ -4,8 +4,8 @@
 <view class="taskdetails-list-item">知识地图明细表</view>
 
 <view class="taskdetails-edit-title {{updatecolor}}" bind:tap="showAndHide">
-      <text class="iconfont icon-edit font16 icon_color_edit  myicon"></text>
-      <text>添加流转意见</text>
+      <text class="iconfont icon-edit font16 icon_color_edit  myicon-edit"></text>
+      <text class=''>添加流转意见</text>
 </view>
 
 <view class="taskdetails-edit-content {{hide}}">

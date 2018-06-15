@@ -31,7 +31,8 @@ App({
   //全局变量
   globalData:{
     array: new Array("","","",""),
-    urlPrefix:"http://119.29.176.106:8090/"
+    urlPrefix:"http://119.29.176.106:8090/",
+    userId:"402881e70be6d209010be75668750014"
     
 
     }

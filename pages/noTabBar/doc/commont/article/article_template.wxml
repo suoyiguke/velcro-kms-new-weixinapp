@@ -1,9 +1,9 @@
 
 <!-- 流程列表 -->
 <template name="article-commont-template">
-<view hover-class="bc-select" class="bc-unchecked"  bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" bind:tap="itemTap">
+<view data-docid="{{item.id}}" hover-class="bc-select" class="bc-unchecked"  bind:tap="articleItemTap">
 <image src="/static/img/mfolder.png" class="article-item-img"></image>
-<text class="article-item-title">{{item.name}}</text>
+<text class="article-item-title-ar">{{item.name}}</text>
 <text class="article-item-time">{{item.createdate}}</text>
 <text class="article-item-author">{{item.creator}}</text>
 <!-- 箭头 -->

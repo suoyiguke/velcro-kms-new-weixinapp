@@ -13,7 +13,7 @@
   text-align: center;
   flex: 1;
   color: #000;
-  font-size: 16px;
+  font-size: 32rpx;
 
 }
 
@@ -23,7 +23,7 @@
   text-align: center;
   color: #387ef5;
   flex: 1;
-  font-size: 16px;
+  font-size: 32rpx;
   border-bottom: 2px solid #387ef5;
 }
 

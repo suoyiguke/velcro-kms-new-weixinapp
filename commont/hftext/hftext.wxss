@@ -1,0 +1,77 @@
+.myicon-fs{
+color:#B1AFAF;
+font-size:30rpx;
+position:absolute;
+left:668rpx;
+top:25rpx;
+}
+.huifuxx{
+height:540rpx;
+  border-top: 1rpx solid #B0B7BC;
+  border-bottom: 1rpx solid #B0B7BC;
+  position:fixed;
+  width:100%;
+  z-index:2;
+  left: 20rpx;
+  top:1090rpx;
+
+background-color: #fff;
+
+
+}
+
+.container-swsc{
+  height:250rpx;
+}
+
+.interaction-placeholde{
+  padding-left: 20rpx;
+}
+
+.interaction-one-lm-hd-img{
+
+  height:80rpx;
+width:80rpx;
+position:absolute;
+top:10rpx;
+left:40rpx;
+
+}
+
+.interaction-there-lm-content-hf{
+  width: 568rpx;
+  height: 100rpx;
+  margin:  0 auto;
+  font-size: 28rpx;
+  background-color: #EEEEEE;
+  margin-top: 20rpx;
+}
+
+.interaction-there-lm-content-hf-user{
+  font-size: 28rpx;
+  color: #4385F5;
+}
+
+.interaction-there-lm-content-hf-time{
+  margin-left: 50rpx;
+  font: 12px;
+  color: #B1AEAE;
+
+
+}
+
+.huifu{
+ 
+ min-height:500rpx;
+
+}
+
+.huifu-text{
+ height:  60rpx;
+ width: 85%;
+ border-bottom: 2px solid #B0B7BC;
+ border-radius:6px;
+ margin-top:20rpx;
+ margin-left: 20rpx;
+
+}

@@ -9,7 +9,7 @@
   text-align: center;
   line-height: 76rpx;
   border: 1px solid #DDDDDD;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 
 .taskdetails-edit-title{
@@ -17,10 +17,10 @@
   line-height: 100rpx;
   background-color: #387EF5;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 28rpx;
 }
 
-.myicon{
+.myicon-edit{
 
    margin-left: 30rpx;
    margin-right: 10rpx;
@@ -46,7 +46,7 @@
  width:652rpx;
  border: 1px solid #B4D2EF;
  border-radius:5px;
- font-size: 14px;
+ font-size: 28rpx;
  }
 
  .taskdetails-button{
@@ -112,7 +112,7 @@
 /* 底部弹窗相关样式 */
 .taskdetails-action-sheet-title{
   color: #8F8F8F;
-  font-size: 14px;
+  font-size: 28rpx;
 
 }
 .taskdetails-action-sheet-item{

@@ -1,7 +1,7 @@
 @import "../message.wxss";
 
 .messgae-item-time{
-   font-size: 11px;
+   font-size: 22rpx;
    position: absolute;
    bottom:-28rpx;
    left:150rpx;

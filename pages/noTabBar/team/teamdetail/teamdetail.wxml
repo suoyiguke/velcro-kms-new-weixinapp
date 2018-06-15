@@ -1,0 +1,42 @@
+<include src="/commont/header/header.wxml"/>
+
+<view hover-class="teamdetail-item-select" class="teamdetail-item-Unchecked">
+<image src='{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{teamDetail.virtuallogo}}' class='teamdetail-item-img'></image>
+<view class='teamdetail-item-info'>
+<text class='teamdetail-item-info-title'>{{teamDetail.teamname}}</text>
+<text class='teamdetail-item-info-lb'>{{teamDetail.summary}}</text>
+</view>
+</view>
+<!-- 团队详细介绍版块 -->
+<view class='teamdetail-info'>
+<view>创建者： {{teamDetail.createor}}</view>
+<view>创建时间： {{teamDetail.createtime}}</view>
+<view>成员人数： {{teamDetail.memberNum}}</view>
+<view>团队类型： {{teamDetail.teamtype}}</view>
+</view>
+
+<!-- tab切换 -->
+<include src="/commont/tab/tab.wxml"/>
+<!-- tab切换 -->
+<view class="{{option1?'show':'hidden'}}">
+<block wx:for="{{teamPersonList}}">
+
+
+<view bind:tap="itemTap" data-userid="{{item.userId}}" hover-class="teamdetail-person-item-select" class="teamdetail-person-item-Unchecked">
+<image src='{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.userImg}}' class='teamdetail-person-item-img'></image>
+<text class='teamdetail-person-item-name'> {{item.userName}}</text>
+</view>
+</block>
+</view>
+
+
+<!-- tab2 -->
+<view class="{{option2?'show':'hidden'}}">
+<block wx:for="{{teamDocList}}">
+
+
+<view bind:tap="itemDacTap" data-docid="{{item.id}}" hover-class="teamdetail-person-item-select" class="teamdetail-person-item-Unchecked">
+<text class='teamdetail-doc-item-name'> {{item.title}}</text>
+</view>
+</block>
+</view>

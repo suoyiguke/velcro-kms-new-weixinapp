@@ -16,7 +16,7 @@ left:150rpx;
 
 }
 .messgae-item-author{
- font-size: 11px;
+ font-size: 22rpx;
  position: absolute;
  bottom:-25rpx;
  left:150rpx;
@@ -26,7 +26,7 @@ left:150rpx;
 
 }
 .messgae-item-time{
-   font-size: 11px;
+   font-size: 22rpx;
    position: absolute;
   bottom:-25rpx;
   left:500rpx;
@@ -43,7 +43,7 @@ left:150rpx;
 
   padding-left: 25rpx;
   line-height: 160rpx;
-  font-size: 16px;
+  font-size: 32rpx;
 
     position:  relative;
 
@@ -55,7 +55,7 @@ left:150rpx;
 
   padding-left: 25rpx;
   line-height: 160rpx;
-  font-size: 16px;
+  font-size: 32rpx;
 
   position:  relative;
 

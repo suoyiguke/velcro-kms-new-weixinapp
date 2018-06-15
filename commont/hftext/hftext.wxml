@@ -1,0 +1,9 @@
+<!-- 底部回复框 -->
+<view class="huifuxx">
+  <view class="huifu">
+    <input placeholder="回复作者" focus="{{focus}}" class="huifu-text" placeholder-class="interaction-placeholde" />
+    <text class="myicon-fs iconfont icon-icon_sent " maxlength="-1"></text>
+  </view>
+</view>
+<!-- 尸位素餐 -->
+<view class="container-swsc"></view>

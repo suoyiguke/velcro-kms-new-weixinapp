@@ -1,0 +1,65 @@
+<import src="/plugin/wxParse/wxParse.wxml" />
+<include src="/commont/header/header.wxml"/>
+<view class='teamdoc-info'>
+<text class="teamdoc-title"> {{docDetail.doc.subject}}</text>
+<text class="teamdoc-cjr">创建人： {{docDetail.doc.creator}}</text>
+<text class="teamdoc-ssbm">所属部门：{{docDetail.creatorDept}}</text>
+<text class="teamdoc-cjsj">创建时间：  {{docDetail.createDate}}</text>
+<text class="teamdoc-zxxgsj">最新修改时间：  {{docDetail.doc.modifydate}}</text>
+<text class="teamdoc-xdcs">阅读次数： {{docDetail.viewcount}}</text>
+<text class="teamdoc-zfj">主附件：</text>
+<text class="teamdoc-qtfj">其它附件：</text>
+
+</view>
+
+<!-- 回答列表 -->
+
+  <view class="interaction-there">
+    <view class="interaction-there-lm">
+      <view class="interaction-there-lm-title">回复列表</view>
+
+      <block wx:for="{{answerList.pageBean.recordList}}">
+
+        <view class="interaction-there-lm-xx">
+          <view class="interaction-there-lm-top">
+            <block wx:if="{{item.imgId != void(0)}}">
+
+              <image src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imgId}}" class="interaction-one-lm-hd-img"></image>
+            </block>
+            <block wx:else>
+              <image src="/static/img/user.gif" class="interaction-one-lm-hd-img"></image>
+            </block>
+            <text class="interaction-there-lm-top-name">{{item.creatorName}}</text>
+            <text class="interaction-there-lm-top-time">{{item.createtime}}</text>
+            <text bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
+
+          </view>
+
+          <view class="interaction-there-lm-content">
+            <!-- 富文本使用 -->
+            <template is="wxParse" data="{{wxParseData:item.reply}}" />
+
+            <block wx:for="{{item.childList}}">
+
+            <!-- 评论的回复 -->
+              <view class="interaction-there-lm-content-hf">
+                <view><text class="interaction-there-lm-content-hf-user">{{item.creatorName}}</text>　回复了　<text class="interaction-there-lm-content-hf-user">{{item.toUserName}}</text> : <text>{{item.content}}</text><text class="interaction-there-lm-content-hf-time">{{item.createtime}}</text></view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+
+
+
+<!--弹窗-->
+<view catchtouchmove='true'>
+  <dialog id='dialog' title='回复李飞' content='恭喜你，学会了小程序组件' cancelText='取消' confirm='确定' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
+  </dialog>
+</view>
+
+
+<!-- 底部回复框 -->
+<include src="/commont/hftext/hftext.wxml" />

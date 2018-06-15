@@ -1,0 +1,28 @@
+<include src="/commont/header/header.wxml" />
+<view class='dd-one'>
+  <image src='/static/img/doc.png' class='dd-one-img'></image>
+  <text class='dd-one-text'>阅读()</text>
+</view>
+
+<view class='dd-two'>
+</view>
+<view class='en-zy'>
+  <text class="iconfont icon-biezhen  myicon-zy"></text> 摘要
+</view>
+
+<view class='en-zy'>
+  <text class="iconfont icon-edit  myicon-zy"></text> 评论 列表
+</view>
+
+<block wx:for="{{replyList}}">
+  <view class='dd-item'>
+    <block wx:if="{{item.imgfile !=void(0)}}">
+
+      <image src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imgfile}}" class='dd-item-img'></image>
+    </block>
+    <text class='dd-item-user'>{{item.humresname}}</text>
+    <text class='dd-item-time'>{{item.createdate}}  {{item.createtime}}</text>
+    <text class='dd-item-text'>{{item.objdesc==void(0)?"":item.objdesc}}</text>
+  </view>
+
+</block>

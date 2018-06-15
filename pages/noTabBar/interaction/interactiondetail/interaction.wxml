@@ -1,3 +1,6 @@
+<!-- 导入富文本模板 -->
+<import src="/plugin/wxParse/wxParse.wxml" />
+
 <include src="/commont/header/header.wxml" />
 <view>
   <view class="interaction-one">
@@ -5,7 +8,7 @@
       <text class="interaction-one-lm-title">{{questionList.searchBean.title}}</text>
       <view class="mycss">
         <text class="interaction-one-lm-time">提问日期：{{questionList.searchBean.createDate}}</text>
-        <text class="interaction-one-lm-person">期望回答人：{{questionList.searchBean.replyersId}}</text>
+        <text class="interaction-one-lm-person">期望回答人：{{questionList.searchBean.replyersId==void(0)?'':questionList.searchBean.replyersId}}</text>
         <view class="interaction-one-lm-pp">
           <block wx:if="{{questionList.imgId != void(0)}}">
 
@@ -25,7 +28,11 @@
 
   <view class="interaction-two">
     <view class="interaction-two-lm">
-      <rich-text class="interaction-two-lm-content" nodes="{{questionList.searchBean.content}}"></rich-text>
+      <view class="interaction-two-lm-content">
+        <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+      </view>
+
+      <!--       <rich-text class="interaction-two-lm-content" nodes="{{questionList.searchBean.content}}"></rich-text> -->
     </view>
   </view>
 
@@ -34,28 +41,40 @@
     <view class="interaction-there-lm">
       <view class="interaction-there-lm-title">回复列表</view>
 
-<block wx:for="{{answerList.pageBean.recordList}}">
+      <block wx:for="{{answerList.pageBean.recordList}}">
 
-<view class="interaction-there-lm-xx">
-      <view class="interaction-there-lm-top">
-         <block wx:if="{{item.imgId != void(0)}}">
+        <view class="interaction-there-lm-xx">
+          <view class="interaction-there-lm-top">
+            <block wx:if="{{item.imgId != void(0)}}">
 
-            <image src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imgId}}" class="interaction-one-lm-pp-img"></image>
-          </block>
-          <block wx:else>
-            <image src="/static/img/user.gif" class="interaction-one-lm-pp-img"></image>
-          </block>
-        <text class="interaction-there-lm-top-name">{{item.creatorName}}</text>
-        <text class="interaction-there-lm-top-time">{{item.createtime}}</text>
-        <text bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
-        <image class="interaction-there-lm-top-xh" src="/static/img/xh.png"></image>
-        <text class="interaction-there-lm-top-xh-num">1</text>
-      </view>
+              <image src="{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.imgId}}" class="interaction-one-lm-hd-img"></image>
+            </block>
+            <block wx:else>
+              <image src="/static/img/user.gif" class="interaction-one-lm-hd-img"></image>
+            </block>
+            <text class="interaction-there-lm-top-name">{{item.creatorName}}</text>
+            <text class="interaction-there-lm-top-time">{{item.createtime}}</text>
+            <text bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
+            <image class="interaction-there-lm-top-xh" src="/static/img/xh.png"></image>
+            <text class="interaction-there-lm-top-xh-num">{{item.replyLikeNum == void(0)?"0":item.replyNum}}</text>
+          </view>
 
-     <rich-text class="interaction-there-lm-content" nodes="{{item.content}}"></rich-text>
+          <view class="interaction-there-lm-content">
+            <!-- 富文本使用 -->
+            <template is="wxParse" data="{{wxParseData:item.reply}}" />
+            <!--      <rich-text class="interaction-there-lm-content" nodes="{{item.content}}"></rich-text>       
+ -->
+            <block wx:for="{{item.childList}}">
 
-</view>
-</block>
+            <!-- 评论的回复 -->
+              <view class="interaction-there-lm-content-hf">
+                <view><text class="interaction-there-lm-content-hf-user">{{item.creatorName}}</text>　回复了　<text class="interaction-there-lm-content-hf-user">{{item.toUserName}}</text> : <text>{{item.content}}</text><text class="interaction-there-lm-content-hf-time">{{item.createtime}}</text></view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block>
+
 
 
     </view>
@@ -63,14 +82,16 @@
 </view>
 
 <!-- 底部回复框 -->
-<view class="huifuxx">
-<view class="huifu">
-  <input placeholder="回复作者" focus="{{focus}}" class="huifu-text" placeholder-class="interaction-placeholde"/>
-  <text class="iconfont icon-icon_sent font16 myicon" maxlength="-1"></text>
-</view>
-</view>
+<include src="/commont/hftext/hftext.wxml" />
+
+<!-- <view class="huifuxx">
+  <view class="huifu">
+    <input placeholder="回复作者" focus="{{focus}}" class="huifu-text" placeholder-class="interaction-placeholde" />
+    <text class="iconfont icon-icon_sent font16 myicon" maxlength="-1"></text>
+  </view>
+</view> -->
 <!-- 尸位素餐 -->
-<view class="container-swsc"></view>
+<!-- <view class="container-swsc"></view> -->
 
 
 <!--弹窗-->
