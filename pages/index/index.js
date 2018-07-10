@@ -35,13 +35,20 @@ Page({
       { id: 14,"style": "iconfont_encyclopedias", "color": "icon_encyclopedias_color", title: "在线考试"},
       { id: 15,"style": "iconfont_encyclopedias", "color": "icon_encyclopedias_color", title: "问卷调查"},
       { id: 16,"style": "iconfont_encyclopedias", "color": "icon_encyclopedias_color", title: "百度地图"},
-      ]
+      ],
+    workflownum: ""
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log('index.js 的onLoad方法');
+    console.log(wx.getStorageSync("workflownum"));
+    this.setData({
+      workflownum: wx.getStorageSync("workflownum")
+    });
+   
 
   },
 

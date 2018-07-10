@@ -8,10 +8,14 @@
 </view>
 
 <view hover-class="bc-select" class="bc-unchecked" id="messgae-item-contentid">
-<view class="messgae-item-content">{{messDetailList.messagecontent}}
-<block wx:if="{{messDetailList.id}}">
-<text class="messagedetail-href" bind:tap="tapitem">点击查看详情</text>
-</block>
-</view>
+  <view class="messgae-item-content">
+  <!-- rich-text.wxml -->
+<rich-text nodes="{{messDetailList.messagecontent}}">
+    <block wx:if="{{messDetailList.id}}">
+      <text data-workflowid="{{messDetailList.id}}" class="messagedetail-href" bind:tap="tapitem">点击查看详情</text>
+    </block></rich-text>
+
+
+  </view>
 
 </view>

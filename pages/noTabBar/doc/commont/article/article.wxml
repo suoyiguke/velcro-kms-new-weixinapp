@@ -11,9 +11,4 @@
     <template is="article-commont-template" data="{{item}}"/>
 </block>
 </block>
-<block wx:else>
-<view  class="bc-none">
-<view>没有对应的数据</view>
-</view>
-</block>
 

@@ -1,5 +1,9 @@
 {
+  "navigationBarTitleText": "知识百科",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "red",
   "usingComponents": {
     "dialog": "/commont/Dialog/dialog"
   }
+
 }

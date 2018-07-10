@@ -12,7 +12,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+   /*  http://119.29.176.106:8090/mobile/execute.do?action=getContractList&creator=402881e70be6d209010be75668750014&currentPage=1&isread=1&model=contract&objname=&pageSize=20&userId=402881e70be6d209010be75668750014 */
   },
 
   /**

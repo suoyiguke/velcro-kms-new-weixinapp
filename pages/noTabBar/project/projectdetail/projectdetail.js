@@ -20,7 +20,7 @@ Page({
     console.log(options.projectId);
     /* 发起接口请求--已办 */
     wx.request({
-      url: app.globalData.urlPrefix+"mobile/execute.do?action=getProjectView&isread=1&model=projectview&objname=&pageSize=20&projectid=" + options.projectId+"&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getProjectView&isread=1&model=projectview&objname=&pageSize=20&projectid=" + options.projectId+"&userId="+app.globalData.userId,
       data: {
         x: '',
         y: ''

@@ -1,2 +1,23 @@
-<!--pages/questionnaire/questionnaire.wxml-->
-<text>pages/questionnaire/questionnaire.wxml</text>
+<include src="/commont/header/header.wxml"/>
+<include src="/commont/serach/serach.wxml" />
+<include src="/commont/tab/tab.wxml" />
+
+
+<!-- tab切换 -->
+<view class="{{option1?'show':'hidden'}}">
+
+<include src="ques-templ.wxml"/>
+
+
+</view>
+
+<!-- tab2 -->
+<view class="{{option2?'show':'hidden'}}">
+<include src="ques-templ.wxml"/>
+  </view>
+
+
+
+
+
+  

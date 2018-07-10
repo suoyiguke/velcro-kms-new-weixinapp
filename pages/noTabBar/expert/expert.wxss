@@ -25,7 +25,7 @@ background-color: #E2E2E2 ;
   position: absolute;
 
   top:20rpx;
-  left: 10rpx;
+  left: 18rpx;
 
 }
 

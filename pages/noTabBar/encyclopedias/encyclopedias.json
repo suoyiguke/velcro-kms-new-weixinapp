@@ -1,3 +1,6 @@
 {
-  "navigationBarTitleText": "知识百科"
+  "navigationBarTitleText": "知识百科",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "red"
+  
 }

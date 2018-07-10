@@ -1,8 +1,8 @@
 <!-- 底部回复框 -->
 <view class="huifuxx">
   <view class="huifu">
-    <input placeholder="回复作者" focus="{{focus}}" class="huifu-text" placeholder-class="interaction-placeholde" />
-    <text class="myicon-fs iconfont icon-icon_sent " maxlength="-1"></text>
+    <input placeholder="回复作者" focus="{{focus}}" class="huifu-text" placeholder-class="interaction-placeholde" bindinput="bindinput"/>
+    <text class="myicon-fs iconfont icon-icon_sent " maxlength="-1" catch:tap='addRelpy' data-queid="{{questionList.searchBean.id}}" data-docid="{{docDetail.doc.id}}" data-docxid="{{docDetail.id}}"></text>
   </view>
 </view>
 <!-- 尸位素餐 -->

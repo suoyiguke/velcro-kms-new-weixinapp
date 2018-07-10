@@ -204,3 +204,15 @@ view{
 .wxParse-figure {
   overflow: hidden;
 }
+
+
+.star-pos{
+  margin:10rpx auto;
+   border-bottom: 2rpx solid #ddd;
+   width: 708rpx;
+  padding-bottom: 20rpx;
+  margin-left: 20rpx;
+
+  
+
+}

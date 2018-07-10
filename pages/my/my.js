@@ -1,4 +1,4 @@
-var app = getApp(); // 取得全局App
+﻿var app = getApp(); // 取得全局App
 var utils = require("../../utils/util.js");
 Page({
 
@@ -28,9 +28,9 @@ Page({
   onLoad: function (options) {
 
    var that = this;
-    /* http://119.29.176.106:8090/mobile/execute.do?action=getHumres&id=402881e70be6d209010be75668750014&model=humres&pageSize=20 */
+    /* http://119.29.176.106:8090/mobile/execute.do?action=getHumres&id="+app.globalData.userId+"&model=humres&pageSize=20 */
     wx.request({
-      url: app.globalData.urlPrefix +"mobile/execute.do?action=getHumres&id=402881e70be6d209010be75668750014&model=humres&pageSize=20",
+      url: app.globalData.urlPrefix + "mobile/execute.do?action=getHumres&id="+app.globalData.userId+"&model=humres&pageSize=20",
       data: {
         x: '',
         y: ''

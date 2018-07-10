@@ -1,0 +1,37 @@
+<include src="/commont/header/header.wxml" />
+
+
+<view class="qd-title">单选</view>
+<block wx:for="{{singleItems}}" wx:for-item="itemName">
+  <view class='qd-dx'>
+    <rich-text nodes="{{index+1}}、{{itemName.objname}}" class='rich-textclass'></rich-text>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <block wx:for="{{itemName.item}}" wx:for-index="inde">
+        <label class="radio">
+          <radio value="{{item.id}}" checked="{{item.ischecked}}" />
+          <text class='radio-text'>{{item.orders}}、{{item.objname}}</text>
+        </label>
+      </block>
+    </radio-group>
+  </view>
+</block>
+
+
+
+<view class="qd-title">多选</view>
+<block wx:for="{{multiItems}}" wx:for-item="itemName">
+
+  <view class='qd-dx'>
+         <rich-text nodes="{{index+1}}、{{itemName.objname}}" class='rich-textclass'></rich-text>
+    <checkbox-group bindchange="checkboxChange">
+      <block wx:for="{{itemName.item}}" wx:for-index="inde">
+        <label class="checkbox">
+          <checkbox value="{{item.id}}" checked="{{item.ischecked}}" />{{item.value}}
+          <text class='radio-text'>{{item.orders}}、{{item.objname}}</text>
+
+        </label>
+      </block>
+
+    </checkbox-group>
+  </view>
+</block>

@@ -31,7 +31,7 @@
 </view>
 
 <view class='en-zy'>
- <text class="iconfont icon-biezhen  myicon-zy"></text>
+ <text  class="iconfont icon-biezhen  myicon-zy"></text>
  摘要
 </view>
 
@@ -72,7 +72,7 @@
             </block>
             <text class="interaction-there-lm-top-name">{{item.creatorName}}</text>
             <text class="interaction-there-lm-top-time">{{item.createtime}}</text>
-            <text bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
+            <text data-creator="{{item.creator}}" data-objid="{{docDetail.id}}" data-hfwtid="{{item.id}}" bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
 
           </view>
 

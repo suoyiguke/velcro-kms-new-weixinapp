@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    title:"定位"
   },
 
   /**
@@ -19,7 +19,8 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    this.mapCtx = wx.createMapContext('myMap');
+
   },
 
   /**
@@ -62,5 +63,21 @@ Page({
    */
   onShareAppMessage: function () {
   
-  }
+  },
+  getCenterLocation: function () {
+    console.log(123);
+    wx.getLocation({
+      type: 'wgs84',
+      success: function (res) {
+        var latitude = res.latitude;
+        console.log(latitude);
+        var longitude = res.longitude;
+        console.log(longitude);
+        var speed = res.speed;
+        console.log(speed);
+        var accuracy = res.accuracy;
+        console.log(accuracy);
+      }
+    })
+  },
 })

@@ -22,14 +22,16 @@
         overflow: hidden;
         height:290rpx;
         padding-bottom: 20rpx;
+        border-radius:10rpx;
 
     }
     .wx-dialog-title{
         font-size: 36rpx;
-        padding: 5rpx 5rpx 15px 15px;
+        padding-top: 20rpx;
     }
     .wx-dialog-content{
       text-align: left;
+      margin-top: 10rpx;
   
     }
     .wx-dialog-footer{
@@ -94,4 +96,10 @@ left:20rpx;
 
 
 
+ }
+
+ .xx-placeholder{
+   color: #ddd;
+   padding-top:5rpx;
+   padding-left: 5rpx;
  }

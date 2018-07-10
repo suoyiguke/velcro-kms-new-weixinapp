@@ -7,8 +7,9 @@
 <text class="teamdoc-cjsj">创建时间：  {{docDetail.createDate}}</text>
 <text class="teamdoc-zxxgsj">最新修改时间：  {{docDetail.doc.modifydate}}</text>
 <text class="teamdoc-xdcs">阅读次数： {{docDetail.viewcount}}</text>
-<text class="teamdoc-zfj">主附件：</text>
-<text class="teamdoc-qtfj">其它附件：</text>
+<text class="teamdoc-zfj">主附件：{{docDetail.attach.objname}}</text>
+<text class="teamdoc-qtfj">其它附件：{{docDetail.attach.bjnameAndIco
+}}</text>
 
 </view>
 
@@ -31,7 +32,7 @@
             </block>
             <text class="interaction-there-lm-top-name">{{item.creatorName}}</text>
             <text class="interaction-there-lm-top-time">{{item.createtime}}</text>
-            <text bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
+            <text data-objid="{{item.objId}}" data-creator="{{item.creator}}"  data-hfwtid="{{item.id}}" bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
 
           </view>
 

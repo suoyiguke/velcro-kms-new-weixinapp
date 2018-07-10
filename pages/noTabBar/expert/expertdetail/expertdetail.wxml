@@ -1,4 +1,4 @@
-﻿<!--pages/my/my.wxml-->
+<!--pages/my/my.wxml-->
 <include src="/commont/header/header.wxml" />
 
 <!-- 个人信息 -->
@@ -43,7 +43,9 @@
         <block wx:elif="{{index == 5}}">
           <text class="iconfont-content">{{myFontIconList[13].keyword==void(0)?"":myFontIconList[13].keyword}}</text>
         </block>
-
+        <block wx:elif="{{index > 5}}">
+          <view class="triangle-facing-right-doc"></view>
+        </block>
 
       </view>
     </block>

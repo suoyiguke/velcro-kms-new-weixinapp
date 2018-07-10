@@ -1,2 +1,8 @@
 <!--pages/noTabBar/notice/notice.wxml-->
 <include src="/commont/serach/serach.wxml"/>
+
+<button  open-type="getUserInfo" bindgetuserinfo="showUser">授权</button>
+
+<!-- <open-data type="userAvatarUrl"></open-data>
+<open-data type="userGender" lang="zh_CN"></open-data>
+<open-data type="userNickName"></open-data> -->

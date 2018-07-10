@@ -1,1 +1,43 @@
-/* pages/noTabBar/vote/vote.wxss */
+.vote-item{
+height: 156rpx;
+border: 2rpx solid #ddd;
+position: relative;
+}
+
+.vote-item-select{
+height: 156rpx;
+border: 2rpx solid #ddd;
+position: relative;
+background-color: #ddd;
+}
+
+.vote-item-title{
+
+position:absolute;
+left:60rpx;
+top:20rpx;
+font-size:32rpx;
+
+}
+
+.vote-item-content{
+position:absolute;
+left:60rpx;
+top:80rpx;
+font-size:28rpx;
+color:grey;
+
+}
+
+.triangle-facing-right-doc{
+    display:inline-block;
+border-right:8rpx solid #CCCCCC;
+border-bottom:8rpx solid #CCCCCC;
+width:25rpx;
+height:25rpx;
+transform:rotate(-45deg);
+position:absolute;
+left:660rpx;
+top:60rpx;
+
+}

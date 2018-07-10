@@ -31,6 +31,8 @@
    height: 108rpx;
    line-height: 108rpx;
    border: 1px solid #DDDDDD;
+     position: relative;
+
   
 
 }
@@ -39,6 +41,7 @@
    line-height: 108rpx;
    border: 1px solid #DDDDDD;
   background-color: #D9D9D9;
+  position: relative;
 }
 
 /* 图标定位 */
@@ -84,4 +87,18 @@
   float: right;
   margin-right: 20rpx;
    font-size: 36rpx;
+}
+
+
+.triangle-facing-right-doc{
+display:inline-block;
+border-right:6rpx solid #CCCCCC;
+border-bottom:6rpx solid #CCCCCC;
+width:25rpx;
+height:25rpx;
+transform:rotate(-45deg);
+position:absolute;
+left:680rpx;
+top:43rpx;
+
 }

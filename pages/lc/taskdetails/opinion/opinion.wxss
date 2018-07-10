@@ -1,61 +1,85 @@
-.opinion-list-item{
+.opinion-list-item {
   width: 750rpx;
   height: 266rpx;
-  border: 1px solid #DDDDDD;
-  border-top: 1px solid #DDDDDD;
-  background-color: #FFFFFF;
+  border: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
   position: relative;
-
 }
 
-.opinion-list-item-sm{
+.opinion-list-item-sm {
   height: 176rpx;
   width: 682rpx;
-  
   position: absolute;
-  left:50%;
-  margin-left:-341rpx;
-  top:50%;
-  margin-top :-88rpx;
-  
+  left: 50%;
+  margin-left: -341rpx;
+  top: 50%;
+  margin-top: -88rpx;
 }
 
-.opinion-list-item-sm-1{
- font-size: 28rpx;
- position: absolute;
-
- left: 10rpx;
- top: 10rpx;
-}
-
-.opinion-list-item-sm-2{
-   font-size: 28rpx;
-   position: absolute;
-    left: 250rpx;
- top: 10rpx;
-
-}
-
-.opinion-list-item-sm-3{
- font-size: 28rpx;
-   position: absolute;
-    left: 550rpx;
- top: 10rpx;
-
-}
-.opinion-list-item-sm-4{
+.opinion-list-item-sm-1 {
+  font-size: 28rpx;
   position: absolute;
- left: 10rpx;
- top: 50rpx;
- color: #9D9D9D;
- font-size: 72rpx;
+  left: 10rpx;
+  top: 10rpx;
+}
+
+.opinion-list-item-sm-2 {
+  font-size: 28rpx;
+  position: absolute;
+  left: 250rpx;
+  top: 10rpx;
+}
+
+.opinion-list-item-sm-3 {
+  font-size: 28rpx;
+  position: absolute;
+  left: 550rpx;
+  top: 10rpx;
+}
+
+.opinion-list-item-sm-4 {
+  position: absolute;
+  left: 10rpx;
+  top: 50rpx;
+  color: #9d9d9d;
+  font-size: 38rpx;
+}
+
+.opinion-list-item-sm-5 {
+  font-size: 28rpx;
+  position: absolute;
+  left: 10rpx;
+  top: 120rpx;
+}
+
+.option2-item {
+  height: 120rpx;
+  background-color: #f7f7f7;
+  border: 2rpx solid #e1e1e1;
+  line-height: 120rpx;
+}
+
+.option2-item-title {
+  margin-left: 20rpx;
+  color: #525252;
+}
+
+.option2-item-name {
+  float: right;
+  margin-right: 60rpx;
+    color: #525252;
 
 }
 
-.opinion-list-item-sm-5{
- font-size: 28rpx;
-   position: absolute;
-    left: 10rpx;
- top: 120rpx;
+.option2-item-xz {
+  float: right;
+  margin-right: 30rpx;
+}
 
+
+.option2-item-xz-hi{
+   float: right;
+  margin-right: 30rpx;
+  visibility:hidden;
 }

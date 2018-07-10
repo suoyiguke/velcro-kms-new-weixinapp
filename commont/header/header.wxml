@@ -2,7 +2,7 @@
 <view class="head" fixed="true"> 
 
 <block wx:if="{{lastTitle != void(0)}}">
-<text bind:tap="{{returnPage}}"><text class="head-return-icon">＜</text><text class="head-return-text">{{lastTitle}}</text></text>
+<text bind:tap="{{returnPage}}"><text class="triangle-facing-left"></text><text class="head-return-text">{{lastTitle}}</text></text>
 </block>
 
 <!-- 关闭 -->
@@ -14,6 +14,15 @@
 <block wx:if="{{headAdd === true}}">
 <text class="head-new"  bind:tap="addItem">+</text>
 </block>
+
+<block wx:if="{{headOk === true}}">
+<text class="head-ok"  bind:tap="okItem">确定</text>
+</block>
+
+<block wx:if="{{headRight != void(0)}}">
+<text class="head-ok"  bind:tap="okItem">{{headRight}}</text>
+</block>
+
 </view>
 <!-- 尸位素餐 -->
 <view class="head-jg">  

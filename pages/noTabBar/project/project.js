@@ -12,10 +12,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      options: options
+    });
     var that = this;
     /* 发起接口请求--已办 */
     wx.request({
-      url: app.globalData.urlPrefix+"mobile/execute.do?action=getProjectList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&isread=1&model=project&objname=&pageSize=20&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getProjectList&creator=" + app.globalData.userId+"&currentPage=1&isread=1&model=project&objname=&pageSize=20&userId="+app.globalData.userId,
       data: {
         x: '',
         y: ''
@@ -89,7 +92,9 @@ Page({
     wx.navigateTo({
       url: "/pages/noTabBar/project/projectdetail/projectdetail?projectId=" + e.currentTarget.dataset.projectid
     });
-
-
+  }, 
+  onPullDownRefresh: function () {
+    /* 重新加载本页面 */
+    this.onLoad(this.data.options);
   }
 })

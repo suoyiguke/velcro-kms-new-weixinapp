@@ -1,4 +1,4 @@
-var app = getApp(); // 取得全局App
+﻿var app = getApp(); // 取得全局App
 Page({
 
   /**
@@ -36,7 +36,7 @@ Page({
     var that = this;
     /*  发起接口请求--未读消息 */
     wx.request({
-      url: app.globalData.urlPrefix+"mobile/execute.do?action=getUnreadMsg&currentPage=1&model=noticeList&pageSize=20&type=UnreadMsg&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getUnreadMsg&currentPage=1&model=noticeList&pageSize=20&type=UnreadMsg&userId="+app.globalData.userId,
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },
@@ -51,7 +51,7 @@ Page({
 
     /*  发起接口请求--已读消息 */
     wx.request({
-      url: app.globalData.urlPrefix+"mobile/execute.do?action=getReadMsg&currentPage=1&model=readmsg&pageSize=20&type=readmsgs&userId=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getReadMsg&currentPage=1&model=readmsg&pageSize=20&type=readmsgs&userId="+app.globalData.userId,
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },

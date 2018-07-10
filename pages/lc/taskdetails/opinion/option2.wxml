@@ -1,0 +1,15 @@
+
+
+
+
+<block wx:for="{{recordList2}}">
+
+<view data-id="{{item.id}}"  class='option2-item' bind:tap="itemTap">
+<text class='option2-item-title'>{{item.objname}}</text>
+
+<text class="{{isOk==true?'option2-item-xz':'option2-item-xz-hi'}}">✔</text>
+
+<text class='option2-item-name' >{{item.optname}}</text>
+</view>
+
+ </block>

@@ -1,42 +1,58 @@
 /* 导入首页的字体图标 */
 @import "/static/css/index-stylesheet.wxss";
 
-
 /* 滑块图片样式 */
-.lunboimage{
 
-height: 150px;
-width: 100%;
+.lunboimage {
+  height: 150px;
+  width: 100%;
 }
 
-.index-bg-gray{
+.index-bg-gray {
   height: 10px;
-  background-color: #EEEEEE;
-
+  background-color: #eee;
 }
 
 /* 功能栏 */
-.index-home-nav {
-    height: 320px;
-    padding-top: 10px;
-    background: #fff;
 
+.index-home-nav {
+  height: 320px;
+  padding-top: 10px;
+  background: #fff;
+  position: relative;
 }
 
 /* 功能栏---单个选项 */
-.index-item{
+
+.index-item {
   width: 25%;
   height: 42.66px;
   display: inline-block;
   text-align: center;
-
   margin-top: 10px;
-
 }
 
-.index-item-text{
-      display: inline-block;
-      width: 100%;
-      text-align: center;
-      font-size: 24rpx;
+.index-item-text {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 24rpx;
+}
+
+.circle {
+width:45rpx;
+height:45rpx;
+background-color:red;
+border-radius:50%;
+-moz-border-radius:50%;
+-webkit-border-radius:50%;
+position:absolute;
+top:20rpx;
+left:110rpx;
+font-size:28rpx;
+color:#fff;
+text-align:center;
+line-height:45rpx;
+
+
 }

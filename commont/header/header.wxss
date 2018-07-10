@@ -9,12 +9,14 @@
   position: fixed;
   width: 100%;
   z-index:2;
+  top: 0;
  
 }
 /* 空位置，由于 position: fixed;的元素会脱离标准流，则需要有个东西占据它的位置 */
 .head-jg{
     height: 88rpx;
     width: 100%;
+
 
 }
 
@@ -28,7 +30,7 @@
 }
 .head-return-text{
   position: absolute;
-  left:88rpx;
+  left:60rpx;
 
 }
 
@@ -44,5 +46,15 @@
     position: absolute;
   left:15rpx;
   bottom: 4rpx;
-  font-size:56rpx;
+  font-size:35rpx;
+
+}
+
+.head-ok{
+font-size:35rpx;
+color:#FFFFFF;
+position:absolute;
+left:650rpx;
+bottom:4rpx;
+
 }

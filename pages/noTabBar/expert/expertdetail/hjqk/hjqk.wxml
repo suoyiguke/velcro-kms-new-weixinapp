@@ -1,0 +1,13 @@
+<include src="/commont/header/header.wxml"/>
+
+<view>
+
+  <block wx:if="{{text == void(0)}}">
+    <view class="bc-none">
+      <view>没有对应的数据</view>
+    </view>
+  </block>
+  <block wx:else>
+    {{text}}
+  </block>
+</view>

@@ -1,16 +1,15 @@
- <!--components/Dialog/dialog.wxml-->
-    <view class='wx_dialog_container' hidden="{{!isShow}}">
-        <view class='wx-mask'></view>
-        <view class='wx-dialog'>
-            <view class='wx-dialog-title'>{{ title }}</view>
-            <view class='wx-dialog-content'>
-              <textarea class="taskdetails-edit-content-textarea"
-      
-       placeholder="输入回复内容" maxlength="-1"/>
-            </view>
-            <view class='wx-dialog-footer'>
-              <view class='wx-dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</view>
-              <view class='wx-dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
-            </view>
-        </view>
+<!--components/Dialog/dialog.wxml-->
+<view class='wx_dialog_container' hidden="{{!isShow}}">
+  <view class='wx-mask'></view>
+  <view class='wx-dialog'>
+    <view class='wx-dialog-title'>{{ title }}</view>
+    <view class='wx-dialog-content'>
+      <textarea  class="taskdetails-edit-content-textarea" placeholder="输入回复内容" placeholder-class="xx-placeholder" maxlength="-1"  bind:blur="bindTextAreaBlur" > </textarea>
+
     </view>
+    <view class='wx-dialog-footer'>
+      <view class='wx-dialog-btn' catchtap='_cancelEvent'>{{ cancelText }}</view>
+      <view class='wx-dialog-btn' catchtap='_confirmEvent'>{{ confirmText }}</view>
+    </view>
+  </view>
+</view>

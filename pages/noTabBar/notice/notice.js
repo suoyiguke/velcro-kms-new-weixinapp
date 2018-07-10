@@ -62,5 +62,10 @@ Page({
    */
   onShareAppMessage: function () {
     
+  },
+  showUser:function(e){
+    console.log(e.detail.rawData);
+     
+    
   }
 })

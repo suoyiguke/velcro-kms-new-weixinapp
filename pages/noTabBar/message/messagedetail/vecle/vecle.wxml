@@ -1,5 +1,5 @@
 <view class="page-body">
   <view class="page-section page-section-gap">
-    <web-view src="{{urlPrefix}}ServiceAction/com.velcro.workflow.workflow.servlet.WfViewAction?workflowid=2c923dae62cc7c020162cdc2dc0501ed"></web-view>
+    <web-view src="{{urlPrefix}}ServiceAction/com.velcro.nc.vbase.action.urlLinkRequestAction?action=docView&id=2c923dae5fb3e43b015fb9e3b20d00c4"></web-view>
   </view>
 </view>

@@ -88,8 +88,7 @@ border-left:4px solid #0094ff;
 padding-left:20rpx;
 margin-bottom:20rpx;
 position:relative;
-top:20rpx;
-left:10rpx;
+margin-top:20rpx;
 margin-left: 20rpx;
 
 

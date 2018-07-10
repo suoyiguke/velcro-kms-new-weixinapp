@@ -1,0 +1,30 @@
+<include src="/commont/header/header.wxml" />
+<view class='vd-info'>
+  <text class='vd-info-title'>标题: {{detail.voteMainMap.objname}}</text>
+  <text class='vd-info-time'>截止日期: {{detail.voteMainMap.enddate}}</text>
+  <text class='vd-info-ps'>可投票数: {{detail.count}}</text>
+  <text class='vd-info-tplx'>投票类型：{{detail.voteMainMap.isAnonymousName}}</text>
+  <text class='vd-info-jj'>简介：</text>
+  <rich-text class='rich-text' nodes="{{detail.voteMainMap.objdesc}}"></rich-text>
+</view>
+
+<block wx:for="{{detail.voteDetailList}}">
+  <view class='cd-tp-item'>
+    <text class="iconfont icon-xuanzhong xzclass"></text>
+    <view class='view-xx'>
+      <text class='title'>{{item.objname}}</text>
+      <text class='tg'>{{item.objdesc==void(0)?'':item.objdesc}}</text>
+      <rich-text class='sm' nodes="{{item.content}}"></rich-text>
+
+      <block wx:if="{{item.img!=void(0)}}">
+
+        <image class='imageclass' src='http://119.29.176.106:8090/ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{item.img}}'></image>
+
+
+      </block>
+
+      <progress show-info stroke-width="15" class="progressclass" percent="80" active backgroundColor="#EEEEEE" activeColor="#E67E22" radius/>
+      <text class='piaoshu'>5票</text>
+    </view>
+  </view>
+</block>

@@ -20,7 +20,7 @@ Page({
     console.log("消息id============="+id);
 
     wx.request({
-      url: app.globalData.urlPrefix+"mobile/execute.do?action=getNotice&id="+id+"&model=Docbase&pageSize=20&userid=8ae08bac4235c9cf01423696a91708c6",
+      url: app.globalData.urlPrefix+"mobile/execute.do?action=getNotice&id="+id+"&model=Docbase&pageSize=20&userid="+app.globalData.userId,
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },
@@ -30,15 +30,17 @@ Page({
           //res.data.messagecontent = "数据为空！";
           return;
         }
-        var str = res.data.messagecontent;
-        var num = util.nthIndexOf(str, "，", 1);
-        str = str.replace(str.slice(num + 1), '');
-        console.log(str);
-        res.data.messagecontent = str;
-
         that.setData({
           messDetailList: res.data
         });
+/*         console.log(res.data.messagecontent);
+        var num = util.nthIndexOf(res.data.messagecontent, "，", 1);
+        res.data.messagecontent = res.data.messagecontent.replace(res.data.messagecontent.slice(num + 1), '');
+        console.log(res.data.messagecontent);
+
+        that.setData({
+          messDetailList: res.data
+        }); */
        
       }
     });
@@ -94,10 +96,10 @@ Page({
   onShareAppMessage: function () {
   
   },
-  tapitem:function(){
-
+  tapitem:function(e){
+    
     wx.navigateTo({
-      url: "/pages/noTabBar/message/messagedetail/vecle/vecle"
+      url: "/pages/noTabBar/message/messagedetail/vecle/vecle?workflowid=" + e.currentTarget.dataset.workflowid
     });
   }
 })

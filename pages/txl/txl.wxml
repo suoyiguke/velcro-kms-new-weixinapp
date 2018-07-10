@@ -2,3 +2,59 @@
 <include src="/commont/header/header.wxml"/>
 <include src="/commont/serach/serach.wxml"/>
 <include src="/commont/tab/tab.wxml"/>
+<import src="txl-item.wxml"/>
+
+<!-- tab切换 -->
+<view class="{{option1?'show':'hidden'}}">
+
+
+<!-- 判断是否得到数据 --> 
+<block wx:if="{{!syrList.length == 0}}">
+<!-- 迭代 -->
+<block wx:for="{{syrList}}">
+    <template is="doc-commont-template" data="{{item}}"/>
+</block>
+</block>
+<block wx:else>
+<view  class="bc-none">
+<view>没有对应的数据</view>
+</view>
+</block>
+
+
+</view>
+
+<!-- tab2 -->
+<view class="{{option2?'show':'hidden'}}">
+<!-- 判断是否得到数据 --> 
+<block wx:if="{{!cyList.length == 0}}">
+<!-- 迭代 -->
+<block wx:for="{{cyList}}">
+    <template is="doc-commont-template" data="{{item}}"/>
+</block>
+</block>
+<block wx:else>
+<view  class="bc-none">
+<view>没有对应的数据</view>
+</view>
+</block>
+
+</view>
+
+
+<!-- tab3 -->
+<view class="{{option3?'show':'hidden'}}">
+<!-- 判断是否得到数据 --> 
+<block wx:if="{{!wdxsList.length == 0}}">
+<!-- 迭代 -->
+<block wx:for="{{wdxsList}}">
+    <template is="doc-commont-template" data="{{item}}"/>
+</block>
+</block>
+<block wx:else>
+<view  class="bc-none">
+<view>没有对应的数据</view>
+</view>
+</block>
+
+</view>

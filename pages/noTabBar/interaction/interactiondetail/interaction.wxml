@@ -18,9 +18,15 @@
             <image src="/static/img/user.gif" class="interaction-one-lm-pp-img"></image>
           </block>
           <text class="interaction-one-lm-pp-text">{{questionList.searchBean.creatorName}}</text>
-          <view class="expert-list-item-gz" bind:tap="expertGz" data-userid="{{item.userId}}">关注</view>
-          <!--       <view class="expert-list-item-qg" bind:tap="expertQg">取关</view>
- -->
+          <block wx:if="{{questionList.searchBean.isOk == false}}">
+
+            <view class="expert-list-item-gz" bind:tap="expertGz" data-wtid="{{questionList.searchBean.id}}">关注</view>
+          </block>
+
+          <block wx:if="{{questionList.searchBean.isOk == true}}">
+
+            <view class="expert-list-item-qg" bind:tap="expertQg" data-wtid="{{questionList.searchBean.id}}">取关</view>
+          </block>
         </view>
       </view>
     </view>
@@ -54,9 +60,9 @@
             </block>
             <text class="interaction-there-lm-top-name">{{item.creatorName}}</text>
             <text class="interaction-there-lm-top-time">{{item.createtime}}</text>
-            <text bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
-            <image class="interaction-there-lm-top-xh" src="/static/img/xh.png"></image>
-            <text class="interaction-there-lm-top-xh-num">{{item.replyLikeNum == void(0)?"0":item.replyNum}}</text>
+            <text data-creator="{{item.creator}}" data-hfwtid="{{item.id}}" bind:tap="showDialog" class="iconfont icon-huihua interaction-there-lm-top-pl"></text>
+            <image data-creator="{{item.creator}}" data-id="{{item.id}}"    class="interaction-there-lm-top-xh" src="/static/img/xh.png"  catch:tap='addLikeNum'></image>
+            <text class="interaction-there-lm-top-xh-num">{{item.replyLikeNum == void(0)?"0":item.replyLikeNum }}</text>
           </view>
 
           <view class="interaction-there-lm-content">
@@ -66,9 +72,14 @@
  -->
             <block wx:for="{{item.childList}}">
 
-            <!-- 评论的回复 -->
+              <!-- 评论的回复 -->
               <view class="interaction-there-lm-content-hf">
-                <view><text class="interaction-there-lm-content-hf-user">{{item.creatorName}}</text>　回复了　<text class="interaction-there-lm-content-hf-user">{{item.toUserName}}</text> : <text>{{item.content}}</text><text class="interaction-there-lm-content-hf-time">{{item.createtime}}</text></view>
+                <view>
+                  <text class="interaction-there-lm-content-hf-user">{{item.creatorName}}</text>　回复了
+                  <text class="interaction-there-lm-content-hf-user">{{item.toUserName}}</text> :
+                  <text>{{item.content}}</text>
+                  <text class="interaction-there-lm-content-hf-time">{{item.createtime}}</text>
+                </view>
               </view>
             </block>
           </view>
@@ -95,7 +106,7 @@
 
 
 <!--弹窗-->
-<view>
+<view catchtouchmove='true'>
   <dialog id='dialog' title='回复李飞' content='恭喜你，学会了小程序组件' cancelText='取消' confirm='确定' bind:cancelEvent="_cancelEvent" bind:confirmEvent="_confirmEvent">
   </dialog>
 </view>

@@ -4,15 +4,15 @@
 <image src='{{urlPrefix}}ServiceAction/com.velcro.base.file.ShowPicAction?attachid={{teamDetail.virtuallogo}}' class='teamdetail-item-img'></image>
 <view class='teamdetail-item-info'>
 <text class='teamdetail-item-info-title'>{{teamDetail.teamname}}</text>
-<text class='teamdetail-item-info-lb'>{{teamDetail.summary}}</text>
+<text class='{{fontSizeCss}}'>{{teamDetail.summary}}</text>
 </view>
 </view>
 <!-- 团队详细介绍版块 -->
 <view class='teamdetail-info'>
 <view>创建者： {{teamDetail.createor}}</view>
 <view>创建时间： {{teamDetail.createtime}}</view>
-<view>成员人数： {{teamDetail.memberNum}}</view>
-<view>团队类型： {{teamDetail.teamtype}}</view>
+<view>成员人数： {{teamDetail.memberNum == void(0)?"":teamDetail.memberNum }}</view>
+<view>团队类型： {{teamDetail.teamtype == void(0)?"":teamDetail.teamtype}}</view>
 </view>
 
 <!-- tab切换 -->

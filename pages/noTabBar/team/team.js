@@ -18,10 +18,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      options: options
+    });
     var that = this;
     /* 发起接口请求--团队数据 */
     wx.request({
-      url: app.globalData.urlPrefix +"mobile/execute.do?action=getTeamList&currentPage=1&model=teamlist&pageSize=20&teamname=&userId=402881e70be6d209010be75668750014",
+      url: app.globalData.urlPrefix +"mobile/execute.do?action=getTeamList&currentPage=1&model=teamlist&pageSize=20&teamname=&userId=" + app.globalData.userId,
       data: {
         x: '',
         y: ''
@@ -103,5 +106,8 @@ Page({
     wx.navigateBack({
       delta: 1
     });
-  },
+  },onPullDownRefresh: function () {
+    /* 重新加载本页面 */
+    this.onLoad(this.data.options);
+  }
 })

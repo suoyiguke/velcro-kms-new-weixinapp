@@ -16,6 +16,9 @@ interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargi
 <view class="index-home-nav">
 
 <block wx:for="{{iconfont_yangshi}}">
+<block wx:if="{{index ==0}}">
+<view class="circle">{{workflownum}}</view>
+</block>
 <view class="index-item" bind:touchstart="indexItemTouchstart" bind:touchend="indexItemTouchend">
 <!-- 微信小程序的字体图标实现-->
 <text class="iconfont {{item.style}} font24 {{item.color}}" bind:tap="inedxRedirectAction" id="{{item.id}}"></text>
@@ -25,3 +28,5 @@ interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargi
 </block>
 
 </view>
+
+

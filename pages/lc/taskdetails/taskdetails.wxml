@@ -1,7 +1,15 @@
 <!--pages/lc/taskdetails/taskdetails.wxml-->
 <!-- 引入标题 -->
 <include src="/commont/header/header.wxml"/>
-<view class="taskdetails-list-item">知识地图明细表</view>
+
+<block wx:for-items="{{mainFormList}}">
+<view class="taskdetails-list-item">{{item.objname}}</view>
+</block>
+<block wx:for-items="{{detailFormList}}">
+<view class="taskdetails-list-item">{{item.objname}}</view>
+</block>
+
+
 
 <view class="taskdetails-edit-title {{updatecolor}}" bind:tap="showAndHide">
       <text class="iconfont icon-edit font16 icon_color_edit  myicon-edit"></text>
@@ -14,7 +22,7 @@
        placeholder="请输入流转的意见" maxlength="-1"/>
 </view>
 <view class="taskdetails-button">
-<view class="taskdetails-button-save">保存</view>
+<view class="taskdetails-button-save" bind:tap="saveItem">保存</view>
 <view class="taskdetails-button-submit">提交</view>
 <view class="taskdetails-button-more" bind:tap="actionSheetTap">更多
 <text class="iconfont icon-liebiao font16 icon_color_edit "></text>

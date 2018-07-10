@@ -1,3 +1,42 @@
-/* pages/txl/txl.wxss */
+.txl-item {
+  height: 146rpx;
+  border: 2rpx solid #ddd;
+  line-height: 146rpx;
+  position: relative;
+}
+
+.txl-item-select {
+  height: 146rpx;
+  border: 2rpx solid #ddd;
+  line-height: 146rpx;
+  background-color: #ddd;
+}
+
+.txl-item-img {
+  display: inline-block;
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: 26rpx;
+  margin-left: 40rpx;
+  border-radius: 50%;
+}
+
+.txl-item-zw {
+display:inline-block;
+position:absolute;
+top:11rpx;
+left:180rpx;
+font-size:28rpx;
+color:#666;
+
+}
+
+.txl-item-name {
+display:inline-block;
+position:absolute;
+top:-30rpx;
+left:180rpx;
+font-size:35rpx;
 
 
+}

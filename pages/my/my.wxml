@@ -21,7 +21,7 @@
       <text class="iconfont {{item.style}} {{item.size}} {{item.color}}  myicon"></text>
       <text class="iconfont-text">{{item.title}} </text>
 
-      <text class='my-text-info'>{{item.text}} </text>
+      <text class='my-text-info'>{{item.text == void(0)?"":item.text }} </text>
     </view>
 
 

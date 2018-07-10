@@ -1,2 +1,2 @@
-<!--pages/noTabBar/customer/customer.wxml-->
-<text>pages/noTabBar/customer/customer.wxml</text>
+<!--pages/noTabBar/notice/notice.wxml-->
+<include src="/commont/serach/serach.wxml"/>

@@ -1,0 +1,35 @@
+
+<template name="vote-commont-template">
+<view data-id="{{item.requestId}}" class='vote-item' hover-class="vote-item-select" bind:tap="itemTap">
+  <text class='vote-item-title'>{{item.objname}}</text>
+  <text class='vote-item-content'>可投：{{item.limitTimes}}票|截止日期：{{item.enddate}}</text>
+  <view class="triangle-facing-right-doc"></view>
+</view>
+
+
+
+</template>
+
+
+  <!-- <block wx:for="{{recordList}}"> -->
+<block wx:if="{{option1==true}}">
+  <!-- 迭代 -->
+  <block wx:for="{{recordList1}}">
+    <template is="vote-commont-template" data="{{item}}" />
+  </block>
+  
+  <block wx:if="{{recordList1.length == 0}}">
+      <include src="/commont/notext/notext.wxml"/>
+</block>
+</block>
+
+  <!-- <block wx:for="{{recordList}}"> -->
+<block wx:if="{{option2==true}}">
+  <!-- 迭代 -->
+  <block wx:for="{{recordList2}}">
+    <template is="vote-commont-template" data="{{item}}" />
+  </block>
+    <block wx:if="{{recordList2.length == 0}}">
+      <include src="/commont/notext/notext.wxml"/>
+</block>
+</block>

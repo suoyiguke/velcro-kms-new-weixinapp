@@ -1,1 +1,41 @@
-/* pages/questionnaire/questionnaire.wxss */
+.que-item {
+  height: 140rpx;
+  border: 1rpx solid #ddd;
+  position: relative;
+}
+
+.que-item-select {
+  height: 140rpx;
+  border: 1rpx solid #ddd;
+  position: relative;
+  background-color: #ddd;
+}
+
+.que-item-title {
+  position: absolute;
+  top: 20rpx;
+  left: 60rpx;
+}
+
+.que-item-time {
+  color: #666;
+  font-size: 28rpx;
+  position: absolute;
+  top: 80rpx;
+  left: 60rpx;
+  height: 20rpx;
+}
+
+
+.triangle-facing-right-doc{
+    display:inline-block;
+border-right:8rpx solid #CCCCCC;
+border-bottom:8rpx solid #CCCCCC;
+width:25rpx;
+height:25rpx;
+transform:rotate(-45deg);
+position:absolute;
+left:660rpx;
+top:60rpx;
+
+}

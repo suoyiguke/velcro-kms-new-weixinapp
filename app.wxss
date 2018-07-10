@@ -2,52 +2,71 @@
 @import "/commont/serach/serach.wxss";
 @import "/commont/tab/tab.wxss";
 @import "/commont/hftext/hftext.wxss";
-
-
+@import "/commont/notext/notext.wxss";
 
 /* 字体默认14px */
-element, element{
+page{
+  padding-left: 2rpx;
+}
+
+
+element, element {
   font-size: 28rpx;
 }
 
 /* 统一列表！ */
-.list-item{
+
+.list-item {
   height: 164rpx;
-  border-bottom: 1px solid #DDDDDD;
-  border-left: 1px solid #DDDDDD;
-  border-right: 1px solid #DDDDDD;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   line-height: 164rpx;
   padding-left: 26rpx;
   font-size: 32rpx;
+  position: relative;
+}
 
- position: relative;
+.bc-unchecked {
+  background-color: #fff;
+}
 
+.bc-select {
+  background-color: #ddd; /* 背景颜色 */
+}
+
+/* 箭头号 */
+
+.triangle-facing-right {
+  display: inline-block;
+  border-right: 8rpx solid #ccc;
+  border-bottom: 8rpx solid #ccc;
+  width: 25rpx;
+  height: 25rpx;
+  transform: rotate(-45deg);
+  position: absolute;
+  left: 660rpx;
+  top: 60rpx;
+}
+
+.triangle-facing-left {
+display:inline-block;
+margin:8rpx;
+border-left:8rpx solid;
+border-bottom:8rpx solid;
+width:20rpx;
+height:20rpx;
+transform:rotate(45deg);
+position:absolute;
+top:22rpx;
+left:10rpx;
 
 }
 
-
-  .bc-unchecked{
-  background-color: #FFFFFF;
-  
-
-  }
-  .bc-select{
-  background-color: #DDDDDD;/* 背景颜色 */
-  }
-
-
-
-/* 箭头号 */
-  .triangle-facing-right {  
-        display: inline-block;  
-        border-right: 8rpx solid #CCCCCC;
-        border-bottom: 8rpx solid #CCCCCC;  
-        width: 25rpx; height: 25rpx;  
-        transform: rotate(-45deg);  
-
-        position: absolute;
-        left: 660rpx;
-        top: 60rpx; 
-    }  
-
-
+.bc-none{
+  height: 108rpx;
+  line-height: 108rpx;
+  text-align: center;
+  border: 2rpx solid #DDDDDD;
+  background-color: #F8F8F8;
+}

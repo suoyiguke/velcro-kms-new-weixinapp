@@ -57,3 +57,20 @@
 .weui-search-bar-jg{
   height: 92.6rpx;
 }
+
+.serach-qx{
+width:30rpx;
+height:30rpx;
+position:absolute;
+left:655rpx;
+top:15rpx;
+}
+
+.serach-qx-h{
+width:30rpx;
+height:30rpx;
+position:absolute;
+left:655rpx;
+top:15rpx;
+display: none;
+}

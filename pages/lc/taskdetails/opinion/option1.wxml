@@ -1,0 +1,12 @@
+<block wx:for="{{recordList1}}">
+<!-- 375*133 -->
+<view class="opinion-list-item">
+<!-- 341*88 -->
+<view class="opinion-list-item-sm">
+<text class="opinion-list-item-sm-1">{{item.nodename}}</text><text class="opinion-list-item-sm-2">{{item.operatorname}}</text>
+<text class="opinion-list-item-sm-3">{{item.type}}</text>
+<text class="opinion-list-item-sm-4">{{item.remark==void(0)?'':item.remark}}</text>
+<text class="opinion-list-item-sm-5">{{item.operatedate}} {{item.operatortime}}</text>
+</view>
+</view>
+</block>

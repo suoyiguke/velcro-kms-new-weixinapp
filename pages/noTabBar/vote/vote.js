@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
-  
+    optionTitle: ["待参与", '已参与'],
+    option1: true,
+    option2: false,
+    recordList2:[],
+    recordList1: [],
+
   },
 
   /**
@@ -13,6 +18,38 @@ Page({
    */
   onLoad: function (options) {
   
+    this.setData({
+      options: options
+    });
+    var that = this;
+    wx.request({
+      url: app.globalData.urlPrefix + "mobile/execute.do?action=joinVoteList&currentPage=1&model=vote&pageSize=20&userId="+app.globalData.userId,
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          recordList2: res.data.pageBean.recordList
+        });
+      }
+    });
+
+
+
+    wx.request({
+      url: app.globalData.urlPrefix + "mobile/execute.do?action=waitVoteList&model=vote&pageSize=20&userId=" + app.globalData.userId,
+      header: {
+        'content-type': 'application/json;utf-8' // 默认值
+      },
+      success: function (res) {
+        console.log(res.data.pageBean.recordList);
+        that.setData({
+          recordList1: res.data.pageBean.recordList
+        });
+      }
+    });
+
   },
 
   /**
@@ -62,5 +99,25 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+selectOption1: function (e) {
+    this.setData({
+      option1: true,
+      option2: false
+  
+
+    })
+  },
+  selectOption2: function (e) {
+    this.setData({
+      option1: false,
+      option2: true
+    })
+  },
+  itemTap:function(e){
+
+    wx.navigateTo({
+      url: "/pages/noTabBar/vote/voteDetail/voteDetail?id=" + e.currentTarget.dataset.id
+    });
   }
 })

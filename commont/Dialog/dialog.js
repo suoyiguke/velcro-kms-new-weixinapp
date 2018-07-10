@@ -1,3 +1,5 @@
+var app = getApp(); // 取得全局App
+
 // components/Dialog/dialog.js
 Component({
   options: {
@@ -71,6 +73,11 @@ Component({
     _confirmEvent() {
       //触发成功回调
       this.triggerEvent("confirmEvent");
+    },
+    bindTextAreaBlur: function(e){
+      console.log(e.detail.value);
+      app.globalData.textAreValue = e.detail.value;
+      
     }
   }
 })

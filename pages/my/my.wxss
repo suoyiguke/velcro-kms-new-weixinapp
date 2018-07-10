@@ -1,6 +1,4 @@
-/* pages/my/my.wxss */
-/* 导入我的版块的字体图标 */
-@import "/static/css/my-stylesheet.wxss";
+
 /* 导入背景图片 */
 @import "/static/backgroundimage/my.wxss";
 

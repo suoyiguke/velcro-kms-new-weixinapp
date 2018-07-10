@@ -1,7 +1,10 @@
 <include src="/commont/header/header.wxml" />
 <view class='dd-one'>
   <image src='/static/img/doc.png' class='dd-one-img'></image>
-  <text class='dd-one-text'>阅读()</text>
+  <view class='dd-one-title-fu'><text class='dd-one-title'>{{docDetiel.view.subject}}</text></view>
+  <text class='dd-one-name'>{{docDetiel.view.modifier}}</text>
+  <text class='dd-one-time'>{{docDetiel.view.modifydate==void(0)?'':docDetiel.view.modifydate}}</text>
+  <text class='dd-one-text'>阅读({{docDetiel.viewcount}})</text>
 </view>
 
 <view class='dd-two'>
@@ -9,11 +12,29 @@
 <view class='en-zy'>
   <text class="iconfont icon-biezhen  myicon-zy"></text> 摘要
 </view>
-
-<view class='en-zy'>
-  <text class="iconfont icon-edit  myicon-zy"></text> 评论 列表
+<block wx:if="{{docDetiel.view.docabstract!=void(0)}}">
+<view class='en-zhaiyao-value'>
+<text>{{docDetiel.view.docabstract}} </text>
 </view>
 
+<block wx:if="{{docDetiel.attachlist.recordList[0].objname!= void(0)}}">
+<view class='en-zy'>
+  <text class="iconfont icon-biezhen  myicon-zy"></text> 相关附件
+</view>
+<view class='en-zy-value'>
+<text id='yx'>●</text>
+<text>{{docDetiel.attachlist.recordList[0].objname}} </text>
+</view>
+</block>
+
+</block>
+
+
+<view class='en-zy'>
+  <text class="iconfont icon-edit  myicon-zy"></text> 评论列表
+</view>
+
+<view class='reply'>
 <block wx:for="{{replyList}}">
   <view class='dd-item'>
     <block wx:if="{{item.imgfile !=void(0)}}">
@@ -24,5 +45,24 @@
     <text class='dd-item-time'>{{item.createdate}}  {{item.createtime}}</text>
     <text class='dd-item-text'>{{item.objdesc==void(0)?"":item.objdesc}}</text>
   </view>
-
 </block>
+</view>
+<view class='docD-bt'>
+
+  <view class="comment1-description">
+    <view class="star-pos" style="display:flex;flex-direction:row;">
+      <view class="stars  {{flag>=1? 'on': ''}}" bindtap="changeColor1"></view>
+      <view class="stars  {{flag>=2? 'on': ''}}" bindtap="changeColor2"></view>
+      <view class="stars  {{flag>=3? 'on': ''}}" bindtap="changeColor3"></view>
+      <view class="stars  {{flag>=4? 'on': ''}}" bindtap="changeColor4"></view>
+      <view class="stars  {{flag>=5? 'on': ''}}" bindtap="changeColor5"></view>
+    </view>
+</view>
+
+
+    <textarea placeholder="请输入内容：" placeholder-class="textareclass" class='textare'  bind:blur="bindTextAreaBlur"/>
+    <view bind:tap='itemTap' data-id="{{docDetiel.id}}" class='btn'>发送</view>
+</view>
+
+<view class='sv'>
+</view>

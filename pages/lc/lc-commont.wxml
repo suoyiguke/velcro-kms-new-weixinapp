@@ -1,10 +1,10 @@
 
 <!-- 流程列表 -->
 <template name="lc-commont-template">
-<view hover-class="bc-select" class="bc-unchecked"  bind:touchstart="itemTouchStart" bind:touchend="itemTouchEnd" bind:tap="itemTap">
+<view  data-id="{{item.id}}" hover-class="bc-select" class="bc-unchecked" bind:tap="itemTap">
 
 <view class="lc-list-bh">{{item.objno}}</view>
-<view class="lc-list-title">{{item.objname}}</view>
+<view class="lc-list-title">{{item.objname==void(0)?'':item.objname}}</view>
 
 <view class="lc-list-item">
 <text class="lc-list-item-author">创建：{{item.creatorName}}</text>

@@ -1,5 +1,7 @@
 {
   "usingComponents": {
     "dialog": "/commont/Dialog/dialog"
-  }
+  },
+  "enablePullDownRefresh": true,
+  "backgroundColor": "red"
 }

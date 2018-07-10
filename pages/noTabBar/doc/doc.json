@@ -1,1 +1,6 @@
-{}
+{
+  "navigationBarTitleText": "文档",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "red"
+
+}

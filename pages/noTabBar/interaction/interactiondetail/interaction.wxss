@@ -4,7 +4,7 @@
 
 .interaction-one{
 
-  line-height: center;
+
 }
 .interaction-one-lm{
   width:97%;
@@ -13,9 +13,12 @@
 
  .interaction-one-lm-title{
 
-position:relative;
-top:10rpx;
-left:20rpx;
+
+margin-top:20rpx;
+
+margin-left:20rpx;
+
+
 font-size:40rpx;
 display:inline-block;
 
@@ -72,10 +75,10 @@ width:82rpx;
 text-align:center;
 color:#6EA1F7;
 border:1px solid #6EA1F7;
-border-radius:3px;
+border-radius:6rpx;
 position:absolute;
 top:120rpx;
-left:560rpx;
+left:570rpx;
 font-size:30rpx;
 
 
@@ -85,20 +88,19 @@ font-size:30rpx;
 
 
 .expert-list-item-qg{
-/*   position: absolute;
-  top: 45rpx;
-  left: 600rpx; */
 
-
-  height: 52rpx;
-  width: 112rpx;
-  text-align: center;
+ 
   color: #AFACAC;
   border: 1px solid #AFACAC;
-  border-radius:3px;
-  font-size: 36rpx;
+ height:42rpx;
+width:82rpx;
+text-align:center;
 
-  position:absolute;
+border-radius:6rpx;
+position:absolute;
+top:120rpx;
+left:570rpx;
+font-size:30rpx;
 
 }
 
@@ -137,8 +139,7 @@ left:0rpx;
 
 .interaction-there{
   position: relative;
-   line-height: center;
-   min-height:  200rpx;
+
 }
 
 .interaction-there-lm{
@@ -156,8 +157,8 @@ border-left:4px solid #0094ff;
 padding-left:20rpx;
 margin-bottom:20rpx;
 position:relative;
-top:20rpx;
-left:10rpx;
+margin-top:20rpx;
+margin-left:10rpx;
 
 
 }
@@ -253,17 +254,19 @@ margin-left: 30rpx;
 
 .huifu{
  
- min-height:500rpx;
-
+ width: 93%;
+  border-top: 0.5rpx solid #B0B7BC;
+  margin: 0 auto;
 }
 
 .huifu-text{
- height:  60rpx;
- width: 85%;
  border-bottom: 2px solid #B0B7BC;
  border-radius:6px;
  margin-top:20rpx;
- margin-left: 20rpx;
+ margin-left: 40rpx;
+
+  margin-right: 20rpx;
+
 
 }
 .myicon{
@@ -293,16 +296,18 @@ height:240rpx;
 }
 
 .huifuxx{
-height:540rpx;
-  border-top: 0.5rpx solid #B0B7BC;
-  border-bottom: 0.5rpx solid #B0B7BC;
+height:90rpx;
+
+
   position:fixed;
   width:100%;
   z-index:2;
-  left: 20rpx;
-  top:1090rpx;
-
+  bottom:0;
 background-color: #fff;
+left:0rpx;
+
+
+
 
 
 }

@@ -1,2 +1,3 @@
-<!--pages/noTabBar/examination/examination.wxml-->
-<text>pages/noTabBar/examination/examination.wxml</text>
+<view class='exam-item'>
+
+</view>

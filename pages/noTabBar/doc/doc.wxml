@@ -7,5 +7,9 @@
       <include src="/pages/noTabBar/doc/commont/article/article.wxml"/>
 </block>
 
+<block wx:if="{{dac1List.length == 0}}">
+      <include src="/commont/notext/notext.wxml"/>
+</block>
+
 
 

@@ -15,7 +15,8 @@ Page({
     teamDetail:{},
     teamPersonList:[],
     teamDocList:[],
-    urlPrefix:app.globalData.urlPrefix
+    urlPrefix:app.globalData.urlPrefix,
+    fontSizeCss:"teamdetail-item-info-lb"
   
   },
 
@@ -23,6 +24,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      options: options
+    });
     var that = this;
     /* 发起接口请求--团队详情数据 */
     wx.request({
@@ -36,6 +40,14 @@ Page({
       },
       success: function (res) {
         console.log(res.data.searchBean);
+        if (res.data.searchBean.summary.length>20){
+          
+          that.setData({
+            teamDetail: res.data.searchBean,
+            fontSizeCss: "teamdetail-item-info-lb-minfont"
+          });
+          return;
+        }
         that.setData({
           teamDetail: res.data.searchBean
         });
@@ -150,12 +162,15 @@ Page({
   itemTap:function(e){
     console.log(e.currentTarget.dataset.userid);
     console.log("查看团队的纤详细信息！===========由于标准版功能也不完整，这里暂时写到这！");
+    wx.navigateTo({
+      url: "/pages/noTabBar/team/teamdetail/zj/zj?userid=" + e.currentTarget.dataset.userid
+    });
 
 
 
     /* 发起接口请求--已办 */
    /*  wx.request({
-      url: "http://119.23.255.13:8098/mobile/execute.do?action=getDocbaseList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&id=" + id + "&model=DocbaseList&pageSize=20",
+      url: "http://119.23.255.13:8098/mobile/execute.do?action=getDocbaseList&creator=" + app.globalData.userId+"&currentPage=1&id=" + id + "&model=DocbaseList&pageSize=20",
       data: {
         x: '',
         y: ''
@@ -182,9 +197,8 @@ Page({
     wx.navigateTo({
       url: "/pages/noTabBar/team/teamdetail/teamdoc/teamdoc?docId=" + e.currentTarget.dataset.docid
     });
-
-
-
-
-}
+  },onPullDownRefresh: function () {
+    /* 重新加载本页面 */
+    this.onLoad(this.data.options);
+  }
 })

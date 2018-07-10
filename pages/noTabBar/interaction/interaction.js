@@ -24,15 +24,18 @@ Page({
    */
   /**
    * 生命周期函数--监听页面加载
-   * app.globalData.urlPrefix +"mobile/execute.do?action=getFaqList&creator=&currentPage=2&isend=0&key=unresolved&model=question&objname=&pageSize=20&replyersid=&type=unresolved&userId=402881e70be6d209010be75668750014"
+   * app.globalData.urlPrefix +"mobile/execute.do?action=getFaqList&creator=&currentPage=2&isend=0&key=unresolved&model=question&objname=&pageSize=20&replyersid=&type=unresolved&userId=" + app.globalData.userId
    * 
    * 只是currentPage的值不同
    */
   onLoad: function (options) {
+    this.setData({
+      options: options
+    });
     var that = this;
     /*  发起接口请求--未解决第1页 */
     wx.request({
-      url: app.globalData.urlPrefix +"mobile/execute.do?action=getFaqList&creator=&currentPage=1&isend=0&key=unresolved&model=question&objname=&pageSize=20&replyersid=&type=unresolved&userId=402881e70be6d209010be75668750014",
+      url: app.globalData.urlPrefix + "mobile/execute.do?action=getFaqList&creator=&currentPage=1&isend=0&key=unresolved&model=question&objname=&pageSize=20&replyersid=&type=unresolved&userId=" + app.globalData.userId,
       data: {
         x: '',
         y: ''
@@ -58,7 +61,7 @@ Page({
 
     /*  发起接口请求--未解决第2页 */
     wx.request({
-      url: app.globalData.urlPrefix + "mobile/execute.do?action=getFaqList&creator=&currentPage=2&isend=0&key=unresolved&model=question&objname=&pageSize=20&replyersid=&type=unresolved&userId=402881e70be6d209010be75668750014",
+      url: app.globalData.urlPrefix + "mobile/execute.do?action=getFaqList&creator=&currentPage=2&isend=0&key=unresolved&model=question&objname=&pageSize=20&replyersid=&type=unresolved&userId=" + app.globalData.userId,
       data: {
         x: '',
         y: ''
@@ -94,7 +97,7 @@ Page({
 
     /*  发起接口请求-已解决 */
     wx.request({
-      url: app.globalData.urlPrefix +"/mobile/execute.do?action=getFaqList&creator=&currentPage=1&isend=1&key=resolved&model=question&objname=&pageSize=20&replyersid=&type=resolved&userId=402881e70be6d209010be75668750014",
+      url: app.globalData.urlPrefix +"/mobile/execute.do?action=getFaqList&creator=&currentPage=1&isend=1&key=resolved&model=question&objname=&pageSize=20&replyersid=&type=resolved&userId=" + app.globalData.userId,
       data: {
         x: '',
         y: ''
@@ -122,7 +125,7 @@ Page({
 
     /*  发起接口请求-待答 */
     wx.request({
-      url: app.globalData.urlPrefix + "/mobile/execute.do?action=getFaqList&creator=&currentPage=1&isend=0&key=task&model=question&objname=&pageSize=20&replyersid=402881e70be6d209010be75668750014&type=task&userId=402881e70be6d209010be75668750014",
+      url: app.globalData.urlPrefix + "/mobile/execute.do?action=getFaqList&creator=&currentPage=1&isend=0&key=task&model=question&objname=&pageSize=20&replyersid="+app.globalData.userId+"&type=task&userId=" + app.globalData.userId,
       data: {
         x: '',
         y: ''
@@ -235,5 +238,8 @@ Page({
     wx.navigateTo({
       url: "/pages/noTabBar/interaction/interactiondetail/interaction?id=" + e.currentTarget.dataset.id
     });
+  },onPullDownRefresh: function () {
+    /* 重新加载本页面 */
+    this.onLoad(this.data.options);
   }
 })

@@ -1,0 +1,31 @@
+<!-- 流程列表 -->
+<template name="doc-commont-template">
+
+<view class='txl-item' hover-class='txl-item-select '>
+
+<block wx:if="{{item.gender==void(0)&&item.imgfile!=void(0)}}">
+<image src='{{item.imgfile}}' class='txl-item-img'></image>
+</block>
+
+<block wx:if="{{item.gender=='402881e90cba854b010cba9c9364000c'&&item.imgfile==void(0)}}">
+<image src='/static/img/boy.png' class='txl-item-img'></image>
+</block>
+
+<block wx:if="{{item.isHum=='org'}}">
+<image src='/static/img/org.png' class='txl-item-img'></image>
+</block>
+
+<block wx:if="{{item.gender=='402881e90cba854b010cba9c9364000d'&&item.imgfile==void(0)}}">
+<image src='/static/img/girl.png' class='txl-item-img'></image>
+</block>
+
+
+
+<text class='txl-item-name'>{{item.objname}}</text>
+<text class='txl-item-zw'>{{item.stationName==void(0)?"":item.stationName}}</text>
+</view>
+
+
+</template>
+
+

@@ -17,8 +17,10 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.setData({
+      options: options
+    });
     var that = this;
-
     //从用户信息页面直接跳转过来查看本人的文档,而且是复杂版块
     if (options.param == "mydoc"){
       that.setData({
@@ -54,7 +56,7 @@ Page({
 
     }
 
-    if (options.lastTitle != void (0) || options.lastTitle != ""){
+    if (options.lastTitle != void (0)){
       that.setData({
         lastTitle: options.lastTitle
       });
@@ -72,32 +74,32 @@ Page({
       });
 
       var id = options.id;
-      console.log("=================id==========" + id);
       if (id == void (0)) {
         id = "";
       }
-      urlx = app.globalData.urlPrefix +"mobile/execute.do?action=getDocbaseList&creator=8ae08bac4235c9cf01423696a91708c6&currentPage=1&id=" + id + "&model=DocbaseList&pageSize=20";
+      urlx = app.globalData.urlPrefix + "mobile/execute.do?action=getDocbaseList&creator=" + app.globalData.userId+"&currentPage=1&id=" + id + "&model=DocbaseList&pageSize=20";
     }
 
     
     /*  发起接口请求--已办 */
     wx.request({
       url: urlx,
-      data: {
-        x: '',
-        y: ''
-      },
       header: {
         'content-type': 'application/json;utf-8' // 默认值
       },
       success: function (res) {
+        if (res.data.pageBean.recordList.length == 0){
+          that.setData({
+            dac1List: res.data.pageBean.recordList
+          });
+          return;
+        }
         console.log(res.data.pageBean.recordList);
 
         //截取字符串
         utils.subString(res.data.pageBean.recordList, "name");
 
         that.setData({
-        
           dac1List: res.data.pageBean.recordList
         });
 
@@ -113,7 +115,7 @@ Page({
           });
 
         }else{
-          console.log("==>有作者，非简单版块============" + that.data.dac1List.creator);
+          console.log("==>有作者，非简单版块============");
           that.setData({
 
             isSimple: false /* 设为非简单版块 */
@@ -200,5 +202,8 @@ Page({
     wx.navigateTo({
       url: "/pages/noTabBar/doc/docDetail/docDetail?docId=" + e.currentTarget.dataset.docid
     });
+  },onPullDownRefresh: function () {
+    /* 重新加载本页面 */
+    this.onLoad(this.data.options);
   }
 })

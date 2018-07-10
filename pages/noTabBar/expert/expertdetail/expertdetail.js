@@ -116,31 +116,48 @@ Page({
 
     console.log(e.currentTarget.dataset.zjid); 
     switch (e.currentTarget.dataset.itemid) {
+      
       case 6:
         wx.navigateTo({
-          url: "/pages/noTabBar/doc/doc?zjid=" + e.currentTarget.dataset.zjid+"&lastTitle=专家详细信息"
+          url: "/pages/noTabBar/doc/doc?zjid=" + e.currentTarget.dataset.zjid + "&lastTitle=文档" + "&type=" + 6
         });
+        console.log("跳转到6");
         break;
       case 7:
-        console.log("跳转到");
+        wx.navigateTo({
+          url: "/pages/noTabBar/expert/expertdetail/hjqk/hjqk?zjid=" + e.currentTarget.dataset.zjid + "&lastTitle=专家简介" + "&type=" + 7
+        });
+        console.log("跳转到7");
         break;
       case 8:
-        console.log("跳转到");
+        wx.navigateTo({
+          url: "/pages/noTabBar/expert/expertdetail/hjqk/hjqk?zjid=" + e.currentTarget.dataset.zjid + "&lastTitle=工程经验" + "&type=" + 8
+        });
+        console.log("跳转到8");
         break;
       case 9:
-        console.log("跳转到");
+        wx.navigateTo({
+          url: "/pages/noTabBar/expert/expertdetail/hjqk/hjqk?zjid=" + e.currentTarget.dataset.zjid + "&lastTitle=项目科研经验" + "&type=" + 9
+        });
+        console.log("跳转到9");
         break;
       case 10:
-        console.log("跳转到");
+        console.log("跳转到10");
+        wx.navigateTo({
+          url: "/pages/noTabBar/expert/expertdetail/hjqk/hjqk?zjid=" + e.currentTarget.dataset.zjid + "&lastTitle=论文论著" +"&type="+10
+        });
         break;
       case 11:
-        console.log("跳转到");
+        console.log("跳转到11");
+        wx.navigateTo({
+          url: "/pages/noTabBar/expert/expertdetail/hjqk/hjqk?zjid=" + e.currentTarget.dataset.zjid +"&lastTitle=知识产权"+ "&type=" + 11
+        });
         break;
       case 12:
-        console.log("跳转到");
-        break;
-      case 13:
-        console.log("跳转到");
+        console.log("跳转到12");
+        wx.navigateTo({
+          url: "/pages/noTabBar/expert/expertdetail/hjqk/hjqk?zjid=" + e.currentTarget.dataset.zjid + "&lastTitle=获奖情况" + "&type=" + 12
+        });
         break;
     }
   }

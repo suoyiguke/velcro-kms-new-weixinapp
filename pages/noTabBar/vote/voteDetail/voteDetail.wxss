@@ -1,0 +1,118 @@
+
+@import "/static/css/my-stylesheet.wxss";
+.vd-info{
+
+font-size:32rpx;
+line-height:64rpx;
+margin:20rpx 0 0 20rpx;
+
+
+}
+
+
+.vd-info-title{
+  display: block;
+}
+
+.vd-info-jj{
+    display: inline-block;
+
+}
+
+
+.vd-info-ps{
+  display: block;
+
+}
+.vd-info-tplx{
+  display: block;
+
+}
+
+.rich-text{
+      display: inline-block;
+
+}
+
+.cd-tp-item{
+  position: relative;
+  font-size: 28rpx;
+  
+border-bottom: 2rpx solid #F1F1F1;
+width: 96%;
+
+}
+
+.xzclass{
+  font-size: 60rpx;
+  color: #387EF5;
+  position: relative;
+  top: 30rpx;
+  left: 20rpx; 
+}
+
+.title{
+ position:relative;
+top:10rpx;
+left:20rpx; 
+font-size: 28rpx;
+
+}
+
+.tg{
+
+  float: right;
+  display: block;
+  margin-top: 10rpx;
+}
+
+.sm{
+position:relative;
+top:30rpx;
+left:20rpx;
+font-size: 28rpx;
+display:block;
+margin-bottom: 30rpx;
+word-wrap: break-word;
+word-break: break-all;
+ width: 100%;
+
+  
+
+  
+}
+
+.imageclass{
+  width: 160rpx;
+  height: 160rpx;
+  position: relative;
+  top: 10rpx;
+  left: 20rpx; 
+    display:block;
+    margin-bottom: 30rpx;
+
+}
+
+.view-xx{
+position:relative;
+left:90rpx;
+top:-60rpx;
+width:623rpx;
+
+
+}
+
+progress {
+   border-radius:5px;
+   margin-left: 20rpx;
+   width: 540rpx;
+
+}
+
+.piaoshu{
+  position: relative;
+  left: 20rpx;
+  top:-60rpx;
+  float: right;
+  margin-top: 20rpx;
+}

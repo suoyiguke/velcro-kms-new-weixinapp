@@ -42,11 +42,19 @@
 
 }
 
+.teamdetail-item-info-lb-minfont {
+   font-size: 18rpx;
+
+   display: block;
+}
+
 .teamdetail-item-info-lb {
    font-size: 31rpx;
    display: block;
 
 }
+
+
 
 .teamdetail-info{
   height: 200rpx;

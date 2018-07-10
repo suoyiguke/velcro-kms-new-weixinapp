@@ -1,2 +1,17 @@
-<!--pages/noTabBar/vote/vote.wxml-->
-<text>pages/noTabBar/vote/vote.wxml</text>
+<include src="/commont/serach/serach.wxml" />
+<include src="/commont/tab/tab.wxml" />
+
+
+<!-- tab切换 -->
+<view class="{{option1?'show':'hidden'}}">
+
+<include src="vote-te.wxml"/>
+
+
+</view>
+
+<!-- tab2 -->
+<view class="{{option2?'show':'hidden'}}">
+<include src="vote-te.wxml"/>
+
+  </view>

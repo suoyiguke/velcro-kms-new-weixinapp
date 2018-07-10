@@ -31,7 +31,12 @@
     "pages/noTabBar/team/teamdetail/teamdoc/teamdoc",
     "pages/noTabBar/encyclopedias/enDetail/enDetail",
     "pages/noTabBar/doc/docDetail/docDetail",
-    "pages/my/follow/follow"
+    "pages/my/follow/follow",
+    "pages/noTabBar/team/teamdetail/zj/zj",
+    "pages/noTabBar/expert/expertdetail/hjqk/hjqk",
+    "pages/noTabBar/vote/voteDetail/voteDetail",
+    "pages/noTabBar/questionnaire/quesdetail/quesdetail",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
